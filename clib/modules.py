@@ -137,6 +137,7 @@ while True:
 
   if(Command == "exit"):
     os.system("clear")
+    os.system("python clib/clear.py")
     end(sys.argv)
 
   enablecommand()

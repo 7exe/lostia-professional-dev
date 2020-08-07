@@ -2,6 +2,9 @@ from command import end
 import sys
 import os
 import platform
+
+
+# this is just fucking spaghetti code, has to be fixed in the future
 def creation_date(path_to_file):
     if platform.system() == 'Windows':
         return os.path.getctime(path_to_file)

@@ -59,18 +59,5 @@ try:
       else:
         print(Command.split(" ")[0]+": command not found")
     os.system(execute)
-except:
-  try:
-    if(platform.system() == "Linux"):
-      def setTerminalColor():
-        os.system("setterm -background blue -foreground white")
-        print("")
-        os.system("clear")
-        os.system("setterm -background blue -foreground white")
-      setTerminalColor()
-    Error = open("LostiaFiles/Lostiaerrorcritical.loserror").read().replace("#ERROR_LOCATION#", sys.argv[0])
-    print(Error)
-    time.sleep(10)
-    os.system("pkill -9 python")
-  except:
-    os.system("pkill -9 python")
+except UnicodeDecodeError:
+  pass
