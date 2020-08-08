@@ -78,7 +78,7 @@ def write_new_data():
           end(sys.argv)
         else:
           with open("LostiaFiles/keychain.keychain","a") as newuser:
-            newuser.write("\n/"+fullName+"/"+sys.argv[1]+"/"+password+"/"+sys.argv[2]+"/visable/"+str(datetime.now())+"/")
+            newuser.write("\n/"+fullName+"/"+sys.argv[1]+"/"+password+"/"+sys.argv[2]+"/visable/"+str(datetime.now())+"/Color/")
             newuser.close()
           print("Added new user")
           end(sys.argv)

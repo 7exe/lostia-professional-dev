@@ -61,12 +61,18 @@ try:
     execute = ""
     for I in CoreCommands:
       if(Command.split(" ")[0] == I.replace("\n","")):
+        with open("LostiaFiles/.gripple_history","a") as history:
+          history.write(Command+"\n")
+          history.close()
         execute = "python clib/"+I.replace("\n","")+".py "+Command.split(I.replace("\n",""))[1]
       else:
         pass
     
     for O in Modules:
       if(Command.split(" ")[0] == O.replace("\n","")):
+        with open("LostiaFiles/.gripple_history","a") as history:
+          history.write(Command+"\n")
+          history.close()
         execute = "python clib/"+O.replace("\n","")+".py "+Command.split(O.replace("\n",""))[1]
       else:
         pass
@@ -81,6 +87,7 @@ try:
           pass
       else:
         print(Command.split(" ")[0]+": command not found")
+
     os.system(execute)
 except UnicodeDecodeError:
   pass
