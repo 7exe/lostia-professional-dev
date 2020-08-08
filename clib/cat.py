@@ -1,6 +1,10 @@
 import sys
 import os
 from command import end
+loggedInUser = open("LostiaFiles/user.data").read()
+if(loggedInUser == "guest"):
+  print("cat: Permission Denied")
+  end(sys.argv)
 
 def check_if_has_arguments():
   if(len(sys.argv)> 1):

@@ -16,6 +16,7 @@ def MainCommand():
           Help = open("LostiaHelp/"+sys.argv[1]+".help").readlines()
           for I in Help:
             print(I.replace("\n",""))
+            #.replace("#BLUE","\033[38;5;27m").replace("#RESET","\033[39m")
           end(sys.argv)
         else:
           pass
@@ -24,6 +25,7 @@ def MainCommand():
           Help = open("LostiaHelp/"+sys.argv[1]+".help").readlines()
           for I in Help:
             print(I.replace("\n",""))
+            #.replace("#BLUE","\033[38;5;27m").replace("#RESET","\033[39m").replace("#PINK","\033[38;5;201m").replace("#RED","\033[38;5;1m").replace("#YELLOW","\033[38;5;11m")
           end(sys.argv)
         else:
           pass
@@ -41,6 +43,7 @@ def MainCommand():
         filepath = os.path.join(folder, file)
         f = open(filepath, 'r')
         print(file.replace(".help","") +" - "+f.read())
+        #.replace("#BLUE","").replace("#RESET","").replace("#PINK","").replace("#RED","").replace("#YELLOW","")
         f.close()
       else:
         pass

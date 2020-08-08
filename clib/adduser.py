@@ -72,7 +72,7 @@ def write_new_data():
       if(fullName != "" or fullName.split(" ")[0]!=""):
         if(len(sys.argv)==2):
           with open("LostiaFiles/keychain.keychain","a") as newuser:
-            newuser.write("\n/"+fullName+"/"+sys.argv[1]+"/"+password+"/user/visable/"+str(datetime.now())+"/")
+            newuser.write("\n/"+fullName+"/"+sys.argv[1]+"/"+password+"/user/visable/"+str(datetime.now())+"/Color/")
             newuser.close()
           print("Added new user")
           end(sys.argv)

@@ -5,6 +5,19 @@ from time import sleep
 import platform
 
 
+def get_user_from_keychain():
+  keychain = open("LostiaFiles/keychain.keychain").readlines()
+
+  loggedInAs = open("LostiaFiles/user.data").read()
+
+  for user in keychain:
+    if(user.split("/")[2] == loggedInAs):
+      return user
+    else:
+      pass
+  return "/Guest/guest/NoPass/NoPerm/visable/NoDate/Color/"
+
+
 
 
 
@@ -26,7 +39,17 @@ try:
         display = currentDir[0].replace("LostiaFiles/root/home/"+loggedInAs,"")
       else:
         display = currentDir[0].replace("LostiaFiles/root/","")
-    Command = input("\033[32m"+loggedInAs+"@"+platform.node()+"\033[39m:\033[34m"+display+"\033[39m$ ")
+    if(loggedInAs != "systemadmin"):
+      if(get_user_from_keychain().split("/")[7] == "Color"):
+        Command = input("\033[32m"+loggedInAs+"@"+platform.node()+"\033[39m:\033[34m"+display+"\033[39m$ ")
+      else:
+        Command = input(loggedInAs+"@"+platform.node()+":"+display+"$ ")
+    else:
+      if(get_user_from_keychain().split("/")[7] == "NoColor"):
+        Command = input("root@"+platform.node()+":"+display+"# ")
+      else:
+        Command = input("\033[32mroot@"+platform.node()+"\033[39m:\033[34m"+display+"\033[39m# ")
+
     def onCommand():
       if(Command):
         return True

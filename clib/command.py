@@ -18,6 +18,15 @@ users = open("LostiaFiles/keychain.keychain")
 
 currentUser = open("LostiaFiles/user.data").read()
 
+def who_am_i():
+  if(currentUser != "systemadmin"):
+    return currentUser
+  else:
+    return "root"
+    
+def get_command_args():
+  return sys.argv
+
 def ask_for_password(commandname,passwordownername,maxattempts,password):
   count = 1
   while count<maxattempts+1:

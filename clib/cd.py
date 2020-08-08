@@ -13,7 +13,7 @@ def check_if_has_arguments():
     end(sys.argv)
 
 if(loggedInUser == "guest"):
-  print("Permission Denied")
+  print("cd: Permission Denied")
   end(sys.argv)
 
 check_if_has_arguments()
