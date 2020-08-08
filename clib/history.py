@@ -1,6 +1,11 @@
 from command import end
 import sys
 
+loggedInUser = open("LostiaFiles/user.data").read()
+if(loggedInUser == "guest"):
+  print("history: Permission Denied")
+  end(sys.argv)
+
 historyAsArray = open("LostiaFiles/.gripple_history").readlines()
 
 lineCount = 0
