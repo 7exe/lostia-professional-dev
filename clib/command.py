@@ -18,6 +18,17 @@ users = open("LostiaFiles/keychain.keychain")
 
 currentUser = open("LostiaFiles/user.data").read()
 
+def new_arg_parser(argument):
+  import sys
+  if(argument == "" or argument.replace(" ","") == ""):
+    raise ValueError("argument value cannot be nothing")
+  else:
+    if(argument in sys.argv):
+      return True
+    else:
+      return False
+
+
 def who_am_i():
   if(currentUser != "systemadmin"):
     return currentUser
