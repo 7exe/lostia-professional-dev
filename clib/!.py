@@ -11,24 +11,29 @@ coreCmd = open("LostiaMain/CoreConf.config").readlines()
 def run_command(command):
   canContinue = False
   for I in modules:
-    if(command == I.replace("\n","")):
-      canContinue = True
-  for I in coreCmd:
-    if(command == I.replace("\n","")):
+    if(command.split(" ")[0] == I.replace("\n","")):
       canContinue = True
 
+  for I in coreCmd:
+    if(command.split(" ")[0] == I.replace("\n","")):
+      canContinue = True
+
+
   if(canContinue == False):
+
     print(command.split(" ")[0]+": command not found")
     end(sys.argv)
 
 
 
-  if(command in hidden):
+  if(command.split(" ")[0] in hidden):
+
     print(command.split(" ")[0]+": command not found")
     end(sys.argv)
   elif(os.path.isfile("clib/"+command.split(" ")[0]+".py")):
     pass
   else:
+
     print(command.split(" ")[0]+": command not found")
     end(sys.argv)
   
@@ -39,14 +44,22 @@ if(loggedInUser == "guest"):
 historyAsArray = open("LostiaFiles/.gripple_history").readlines()
 
 if(len(sys.argv)>1):
-  if(int(sys.argv[1])<len(historyAsArray)):
-    command = historyAsArray[int(sys.argv[1])-1].replace("\n","")
-    run_command(command)
-    os.system("python clib/"+command.split(" ")[0].replace("\n","")+".py"+" "+command.replace(command.split(" ")[0],""))
-    end(sys.argv)
+  if("-" not in sys.argv):
+      if(int(sys.argv[1])<len(historyAsArray)):
+        command = historyAsArray[int(sys.argv[1])-1].replace("\n","")
+        print(command)
+        run_command(command)
+        os.system("python clib/"+command.split(" ")[0].replace("\n","")+".py"+" "+command.replace(command.split(" ")[0],""))
+        end(sys.argv)
+      else:
+        print("History line not found")
+        end(sys.argv)
   else:
-    print("History line not found")
+    lastRunnedCommand = historyAsArray[len(historyAsArray)-1].replace("\n","")
+    print(lastRunnedCommand)
+    run_command(lastRunnedCommand)
+    os.system("python clib/"+lastRunnedCommand.split(" ")[0].replace("\n","")+".py"+" "+lastRunnedCommand.replace(lastRunnedCommand.split(" ")[0],""))
     end(sys.argv)
 else:
-  print("!: ! history line")
+  print("!: ! history line / ! -")
   end(sys.argv)
