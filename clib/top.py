@@ -5,6 +5,7 @@ import sys
 import psutil
 import os
 
+
 loggedInUser = open("LostiaFiles/user.data").read()
 
 if(loggedInUser == "guest"):

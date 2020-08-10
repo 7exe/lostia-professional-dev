@@ -3,6 +3,7 @@ import sys
 import time
 from time import sleep
 import platform
+from difflib import SequenceMatcher
 
 def set_terminal_title(title):
   print('\33]0;'+title+'\a', end='')
@@ -82,13 +83,13 @@ try:
       finalResults = []
       if(Command != ""):
         for I in CoreCommands:
-          if(I.startswith(Command)):
+          if(SequenceMatcher(a=I,b=Command).ratio()>=0.6 or I.startswith(Command)):
             finalResults.append("  command '"+I.replace("\n","")+"' from core commands")
             dontPrint = True
           else:
             pass
         for I in Modules:
-          if(I.startswith(Command)):
+          if(SequenceMatcher(a=I,b=Command).ratio()>=0.6 or I.startswith(Command)):
             finalResults.append("  command '"+I.replace("\n","")+"' from module commands")
             dontPrint = True
           else:
