@@ -24,14 +24,15 @@ else:
 if(".." not in sys.argv):
   if("-" not in sys.argv):
     if(os.path.isdir(currentDir+sys.argv[1])):
-      open("LostiaFiles/current.directory","w").close()
-      with open("LostiaFiles/current.directory","r+") as changeFile:
-        changeFile.truncate(0)
-        if("/" in sys.argv[1]):
-          changeFile.write(currentDir+sys.argv[1])
-        else:
-          changeFile.write(currentDir+sys.argv[1]+"/")
-        changeFile.close()
+      if(sys.argv[1].startswith("./") == False and sys.argv[1] != "/"):
+        open("LostiaFiles/current.directory","w").close()
+        with open("LostiaFiles/current.directory","r+") as changeFile:
+          changeFile.truncate(0)
+          if("/" in sys.argv[1]):
+            changeFile.write(currentDir+sys.argv[1])
+          else:
+            changeFile.write(currentDir+sys.argv[1]+"/")
+          changeFile.close()
     else:
       print("Directory not found")
   else:

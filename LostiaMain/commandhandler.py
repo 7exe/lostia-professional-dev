@@ -4,6 +4,9 @@ import time
 from time import sleep
 import platform
 
+def set_terminal_title(title):
+  print('\33]0;'+title+'\a', end='')
+  sys.stdout.flush()
 
 def get_user_from_keychain():
   keychain = open("LostiaFiles/keychain.keychain").readlines()
@@ -42,13 +45,17 @@ try:
     if(loggedInAs != "systemadmin"):
       if(get_user_from_keychain().split("/")[7] == "Color"):
         Command = input("\033[32m"+loggedInAs+"@"+platform.node()+"\033[39m:\033[34m"+display+"\033[39m$ ")
+        set_terminal_title(loggedInAs+"@"+platform.node()+":"+display+"$")
       else:
         Command = input(loggedInAs+"@"+platform.node()+":"+display+"$ ")
+        set_terminal_title(loggedInAs+"@"+platform.node()+":"+display+"$ ")
     else:
       if(get_user_from_keychain().split("/")[7] == "NoColor"):
         Command = input("root@"+platform.node()+":"+display+"# ")
+        set_terminal_title("root@"+platform.node()+":"+display+"# ")
       else:
         Command = input("\033[32mroot@"+platform.node()+"\033[39m:\033[34m"+display+"\033[39m# ")
+        set_terminal_title("root@"+platform.node()+":"+display+"# ")
 
     def onCommand():
       if(Command):
@@ -71,20 +78,43 @@ try:
       else:
         pass
     if(execute == ""):
-      if(Command.split(" ")[0] == ""):
-        if(Command.replace(" ","") != ""):
-          if(Command.split(" ")[0] == ""):
-            print(Command.replace(" ","")+": command not found")
+      dontPrint = False
+      finalResults = []
+      if(Command != ""):
+        for I in CoreCommands:
+          if(I.startswith(Command)):
+            finalResults.append("  command '"+I.replace("\n","")+"' from core commands")
+            dontPrint = True
           else:
-            print(Command.split(" ")[0]+": command not found")
+            pass
+        for I in Modules:
+          if(I.startswith(Command)):
+            finalResults.append("  command '"+I.replace("\n","")+"' from module commands")
+            dontPrint = True
+          else:
+            pass
+        if(dontPrint == True):
+          print("Command '"+Command+"' not found, did you mean:\n")
+          for command in finalResults:
+            print(command)
+          print()
+        #print("Try: sudo apt install <deb name>")
+      if(dontPrint == False):
+        if(Command.split(" ")[0] == ""):
+          if(Command.replace(" ","") != ""):
+            if(Command.split(" ")[0] == ""):
+              print(Command.replace(" ","")+": command not found")
+            else:
+              print(Command.split(" ")[0]+": command not found")
+          else:
+            pass
         else:
-          pass
-      else:
-        print(Command.split(" ")[0]+": command not found")
+          print(Command.split(" ")[0]+": command not found")
     if(Command.replace(" ","") != "" and Command.startswith("!") == False):
       with open("LostiaFiles/.gripple_history","a") as history:
           history.write(Command+"\n")
           history.close()
     os.system(execute)
+    dontPrint = False
 except UnicodeDecodeError:
   pass

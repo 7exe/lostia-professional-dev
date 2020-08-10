@@ -49,6 +49,9 @@ if(len(sys.argv)>1):
         command = historyAsArray[int(sys.argv[1])-1].replace("\n","")
         print(command)
         run_command(command)
+        with open("LostiaFiles/.gripple_history","a") as history:
+          history.write(command+"\n")
+          history.close()
         os.system("python clib/"+command.split(" ")[0].replace("\n","")+".py"+" "+command.replace(command.split(" ")[0],""))
         end(sys.argv)
       else:
@@ -58,6 +61,9 @@ if(len(sys.argv)>1):
     lastRunnedCommand = historyAsArray[len(historyAsArray)-1].replace("\n","")
     print(lastRunnedCommand)
     run_command(lastRunnedCommand)
+    with open("LostiaFiles/.gripple_history","a") as history:
+          history.write(lastRunnedCommand+"\n")
+          history.close()
     os.system("python clib/"+lastRunnedCommand.split(" ")[0].replace("\n","")+".py"+" "+lastRunnedCommand.replace(lastRunnedCommand.split(" ")[0],""))
     end(sys.argv)
 else:
