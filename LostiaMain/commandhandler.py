@@ -81,21 +81,21 @@ try:
     if(execute == ""):
       dontPrint = False
       finalResults = []
-      if(Command != ""):
+      if(Command != "" and Command.replace(" ","") != "" and Command.startswith(" ") != True):
         for I in CoreCommands:
-          if(SequenceMatcher(a=I,b=Command).ratio()>=0.6 or I.startswith(Command)):
+          if(SequenceMatcher(a=I,b=Command.split(" ")[0]).ratio()>=0.6 or I.startswith(Command.split(" ")[0])):
             finalResults.append("  command '"+I.replace("\n","")+"' from core commands")
             dontPrint = True
           else:
             pass
         for I in Modules:
-          if(SequenceMatcher(a=I,b=Command).ratio()>=0.6 or I.startswith(Command)):
+          if(SequenceMatcher(a=I,b=Command.split(" ")[0]).ratio()>=0.6 or I.startswith(Command.split(" ")[0])):
             finalResults.append("  command '"+I.replace("\n","")+"' from module commands")
             dontPrint = True
           else:
             pass
         if(dontPrint == True):
-          print("Command '"+Command+"' not found, did you mean:\n")
+          print("Command '"+Command.split(" ")[0]+"' not found, did you mean:\n")
           for command in finalResults:
             print(command)
           print()
@@ -104,7 +104,7 @@ try:
         if(Command.split(" ")[0] == ""):
           if(Command.replace(" ","") != ""):
             if(Command.split(" ")[0] == ""):
-              print(Command.replace(" ","")+": command not found")
+              print(Command.replace(" ","",1).split(" ")[0]+": command not found")
             else:
               print(Command.split(" ")[0]+": command not found")
           else:
