@@ -127,7 +127,7 @@ while True:
     #idle = 0
     #idle = cpu_time.idle.percent
     #print("\033[38;5;21m"+str(user)+" \033[38;5;1m"+str(system)+" \033[38;5;46m"+str(idle))
-
+    #system F
     get_processes()
     
     print("\n\x1b[48;5;249mCTRL+C\x1b[0m To quit")

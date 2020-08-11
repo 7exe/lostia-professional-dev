@@ -83,13 +83,14 @@ try:
       finalResults = []
       if(Command != "" and Command.replace(" ","") != "" and Command.startswith(" ") != True):
         for I in CoreCommands:
-          if(SequenceMatcher(a=I,b=Command.split(" ")[0]).ratio()>=0.6 or I.startswith(Command.split(" ")[0])):
+          if(SequenceMatcher(a=I,b=Command.split(" ")[0]).ratio()>=0.6):
             finalResults.append("  command '"+I.replace("\n","")+"' from core commands")
             dontPrint = True
           else:
             pass
         for I in Modules:
-          if(SequenceMatcher(a=I,b=Command.split(" ")[0]).ratio()>=0.6 or I.startswith(Command.split(" ")[0])):
+          if(SequenceMatcher(a=I,b=Command.split(" ")[0]).ratio()>=0.6):
+            # or I.startswith(Command.split(" ")[0])
             finalResults.append("  command '"+I.replace("\n","")+"' from module commands")
             dontPrint = True
           else:

@@ -4,7 +4,13 @@ from command import end
 
 
 Modules = open("LostiaMain/ModuleConf.config").readlines()
+fixedModules = []
+for module in Modules:
+  fixedModules.append(module.replace("\n",""))
 CoreCommands = open("LostiaMain/CoreConf.config").readlines()
+fixedCoreCmd = []
+for command in CoreCommands:
+  fixedCoreCmd.append(command.replace("\n",""))
 
 
 
@@ -39,10 +45,10 @@ def MainCommand():
   else:
     folder = "LostiaHelp/"
     for file in os.listdir(folder):
-      if(".help" in file):
+      if(".help" in file and file.replace(".help","") in fixedCoreCmd or ".help" in file and file.replace(".help","") in fixedModules):
         filepath = os.path.join(folder, file)
         f = open(filepath, 'r')
-        print(file.replace(".help","") +" - "+f.read())
+        print("%-12s %s" %(file.replace(".help",""),f.read()))
         #.replace("#BLUE","").replace("#RESET","").replace("#PINK","").replace("#RED","").replace("#YELLOW","")
         f.close()
       else:
