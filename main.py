@@ -133,5 +133,5 @@ logoutcurrentuser()
 
 time.sleep(1)
 os.system("clear")
-print("Lostia Software, Gripple shell\nVersion 1.4.1, Alpha C")
+print("Lostia Software, Ash\nVersion 1.4.1, Alpha C")
 os.system("python LostiaMain/commandhandler.py")

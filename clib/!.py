@@ -21,20 +21,20 @@ def run_command(command):
 
   if(canContinue == False):
 
-    print(command.split(" ")[0]+": command not found")
+    print("ash: command not found: "+command.split(" ")[0])
     end(sys.argv)
 
 
 
   if(command.split(" ")[0] in hidden):
 
-    print(command.split(" ")[0]+": command not found")
+    print("ash: command not found: "+command.split(" ")[0])
     end(sys.argv)
   elif(os.path.isfile("clib/"+command.split(" ")[0]+".py")):
     pass
   else:
 
-    print(command.split(" ")[0]+": command not found")
+    print("ash: command not found: "+command.split(" ")[0])
     end(sys.argv)
   
 loggedInUser = open("LostiaFiles/user.data").read()

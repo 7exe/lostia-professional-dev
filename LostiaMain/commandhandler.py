@@ -96,7 +96,7 @@ try:
           else:
             pass
         if(dontPrint == True):
-          print("Command '"+Command.split(" ")[0]+"' not found, did you mean:\n")
+          print("ash: "+"Command '"+Command.split(" ")[0]+"' not found, did you mean:\n")
           for command in finalResults:
             print(command)
           print()
@@ -105,13 +105,13 @@ try:
         if(Command.split(" ")[0] == ""):
           if(Command.replace(" ","") != ""):
             if(Command.split(" ")[0] == ""):
-              print(Command.replace(" ","",1).split(" ")[0]+": command not found")
+              print("ash: command not found: "+Command.replace(" ","",1).split(" ")[0])
             else:
-              print(Command.split(" ")[0]+": command not found")
+              print("ash: command not found: "+Command.split(" ")[0])
           else:
             pass
         else:
-          print(Command.split(" ")[0]+": command not found")
+          print("ash: command not found: "+Command.split(" ")[0])
     if(Command.replace(" ","") != "" and Command.startswith("!") == False):
       with open("LostiaFiles/.gripple_history","a") as history:
           history.write(Command+"\n")
