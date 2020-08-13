@@ -29,6 +29,9 @@ def new_arg_parser(argument):
       return False
 
 
+
+
+
 def who_am_i():
   if(currentUser != "systemadmin"):
     return currentUser
@@ -99,3 +102,26 @@ def force_run_command(command):
     raise Exception("Attempted to run '"+command+"', which does not exist or it's hidden.")
     end(sys.argv)
   
+
+# Environment Variable setup
+
+
+env_var_name = open("LostiaFiles/.ash_env_name").readlines()
+env_var_value = open("LostiaFiles/.ash_env_value").readlines()
+
+def add_new_env_var(name,value):
+  global env_var_name
+  global env_var_value
+  if(name in env_var_name):
+    return None
+  if(name.replace(" ","") == ""):
+    raise ValueError("Environment variable name cannot be empty")
+  if(name.startswith(" ")):
+    raise ValueError("Environment variable name cannot start with space")
+  name = str(name)
+  with open("LostiaFiles/.ash_env_name","a") as newData:
+    newData.write("\n"+str(name))
+    newData.close()
+  with open("LostiaFiles/.ash_env_value","a") as newData:
+    newData.write("\n"+str(value))
+    newData.close()

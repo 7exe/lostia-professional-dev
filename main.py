@@ -133,5 +133,31 @@ logoutcurrentuser()
 
 time.sleep(1)
 os.system("clear")
+currentUser = open("LostiaFiles/user.data").read()
+
+if(currentUser != "systemadmin"):
+  if(currentUser != "guest"):
+    homeDir = "LostiaFiles/root/home/"+currentUser+"/"
+  else:
+    homeDir = "None"
+else:
+  homeDir = "LostiaFiles/root/"
+
+with open("LostiaFiles/.ash_env_name","w") as newData:
+  newData.write("HOME")
+  newData.close()
+
+with open("LostiaFiles/.ash_env_value","w") as newData:
+  newData.write(homeDir)
+  newData.close()
+
+with open("LostiaFiles/.ash_env_name","w") as newData:
+  newData.write("USER")
+  newData.close()
+
+with open("LostiaFiles/.ash_env_value","w") as newData:
+  newData.write(currentUser)
+  newData.close()
+
 print("Lostia Software, Ash\nVersion 1.4.1, Alpha C")
 os.system("python LostiaMain/commandhandler.py")

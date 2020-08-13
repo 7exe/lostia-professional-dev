@@ -2,6 +2,8 @@ import sys
 from command import end
 import os
 
+
+
 loggedInUser = open("LostiaFiles/user.data").read()
 currentDir = open("LostiaFiles/current.directory").read()
 

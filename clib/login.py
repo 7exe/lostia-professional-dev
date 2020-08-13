@@ -26,7 +26,10 @@ def login():
     if(sys.argv[1] == user.split("/")[2]):
       count = 1
       while count<4:
-        askForPassword = getpass("[login] enter password for "+sys.argv[1]+": ")
+        try:
+          askForPassword = getpass("[login] enter password for "+sys.argv[1]+": ")
+        except UnicodeDecodeError:
+          pass
         if(askForPassword == user.split("/")[3]):
           count = 4
           print("Successfully logged in!")
@@ -41,6 +44,30 @@ def login():
             changeHomeDir = open("LostiaFiles/current.directory","w")
             changeHomeDir.write("LostiaFiles/root/")
             changeHomeDir.close()
+            currentUser = open("LostiaFiles/user.data").read()
+            if(currentUser != "systemadmin"):
+              if(currentUser != "guest"):
+                homeDir = "LostiaFiles/root/home/"+currentUser+"/"
+              else:
+                homeDir = "None"
+            else:
+              homeDir = "LostiaFiles/root/"
+
+            with open("LostiaFiles/.ash_env_name","w") as newData:
+              newData.write("HOME")
+              newData.close()
+
+            with open("LostiaFiles/.ash_env_value","w") as newData:
+              newData.write(homeDir)
+              newData.close()
+
+            with open("LostiaFiles/.ash_env_name","w") as newData:
+              newData.write("USER")
+              newData.close()
+
+            with open("LostiaFiles/.ash_env_value","w") as newData:
+              newData.write(currentUser)
+              newData.close()
           isLoggedIn = True
           return end(sys.argv)
         else:
@@ -53,6 +80,7 @@ def login():
     print("login: 3 incorrect password attempts.")
   else:
     print("user not found")
+
   end(sys.argv)
 
 login()

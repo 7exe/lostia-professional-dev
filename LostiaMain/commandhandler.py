@@ -25,10 +25,10 @@ def get_user_from_keychain():
 
 
 
-try:
 
 
-  while True:
+while True:
+  try:
 
 
     Modules = open("LostiaMain/ModuleConf.config").readlines()
@@ -105,7 +105,7 @@ try:
         if(Command.split(" ")[0] == ""):
           if(Command.replace(" ","") != ""):
             if(Command.split(" ")[0] == ""):
-              print("ash: command not found: "+Command.replace(" ","",1).split(" ")[0])
+              print("ash: command not found: "+Command.lstrip().split(" ")[1])
             else:
               print("ash: command not found: "+Command.split(" ")[0])
           else:
@@ -118,5 +118,5 @@ try:
           history.close()
     os.system(execute)
     dontPrint = False
-except UnicodeDecodeError:
-  pass
+  except UnicodeDecodeError:
+    continue

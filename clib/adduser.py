@@ -55,14 +55,20 @@ def write_new_data():
   print("Adding user "+sys.argv[1]+" ...")
   create_new_home_directory(sys.argv[1])
   copy_files_default_files(sys.argv[1])
-  password = getpass("\033[39mEnter new LOSTIA password: ")
+  try:
+    password = getpass("\033[39mEnter new LOSTIA password: ")
+  except UnicodeDecodeError:
+    pass
   if("/" in password):
     print("/ is not a valid symbol")
     remove_created_home_directory(sys.argv[1])
 
     end(sys.argv)
   else:
-    retype = getpass("\033[39mRetype new LOSTIA password: ")
+    try:
+      retype = getpass("\033[39mRetype new LOSTIA password: ")
+    except  UnicodeDecodeError:
+      pass
     if(retype != password):
       print("retyped password does not match")
       remove_created_home_directory(sys.argv[1])
