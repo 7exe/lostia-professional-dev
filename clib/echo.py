@@ -16,7 +16,7 @@ def echo():
     newEnvVarValue.append(I.replace("\n",""))
   def update():
     for I in sysArr:
-      if(I.replace("%","") in newEnvVarName):
+      if(I.replace("%","") in newEnvVarName and I.startswith("%")):
         Index = newEnvVarName.index(I.replace("%",""))
         SysIndex = sysArr.index(I)
         sysArr[SysIndex] = str(newEnvVarValue[Index])

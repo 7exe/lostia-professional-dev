@@ -151,12 +151,12 @@ with open("LostiaFiles/.ash_env_value","w") as newData:
   newData.write(homeDir)
   newData.close()
 
-with open("LostiaFiles/.ash_env_name","w") as newData:
-  newData.write("USER")
+with open("LostiaFiles/.ash_env_name","a") as newData:
+  newData.write("\nUSER")
   newData.close()
 
-with open("LostiaFiles/.ash_env_value","w") as newData:
-  newData.write(currentUser)
+with open("LostiaFiles/.ash_env_value","a") as newData:
+  newData.write("\n"+currentUser)
   newData.close()
 
 print("Lostia Software, Ash\nVersion 1.4.1, Alpha C")
