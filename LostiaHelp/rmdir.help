@@ -1,1 +1,3 @@
-remove empty directories
+#namermdir - remove empty directories#name
+#synopsisrmdir [directory]#synopsis
+#descriptionRemove the DIRECTORY(ies), if they are empty.#description

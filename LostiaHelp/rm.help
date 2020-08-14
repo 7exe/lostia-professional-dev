@@ -1,1 +1,3 @@
-remove files
+#namerm - remove files#name
+#synopsisrm[filename]#synopsis
+#descriptionrm removes each specified file.  By default, it does not remove directories.#description

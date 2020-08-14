@@ -1,1 +1,4 @@
-shows history of commands runned in the past
+#namehistory - shows history of commands runned in the past#name
+#synopsishistory#synopsis
+#descriptionprint all commands runned in the past#description
+#options-S      used to search for a command in history#options

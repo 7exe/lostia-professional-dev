@@ -1,1 +1,3 @@
-login to existing user
+#namelogin - login to existing user#name
+#synopsislogin [username]#synopsis
+#descriptionlogin to an existing user that has been added to ash#description

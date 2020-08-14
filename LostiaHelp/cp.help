@@ -1,1 +1,3 @@
-copy files and directories
+#namecp - copy files and directories#name
+#synopsiscp [source file] [target]#synopsis
+#descriptioncopy files and their contents to a new file with the set name and directory#description

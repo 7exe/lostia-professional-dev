@@ -1,1 +1,3 @@
-make directories
+#namemkdir - make directories#name
+#synopsismkdir DIRECTORY...#synopsis
+#descriptionCreate the DIRECTORY(ies), if they do not already exist.#description

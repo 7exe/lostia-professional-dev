@@ -8,6 +8,14 @@ version = "1.3.1"
 
 [[package]]
 category = "main"
+description = "Read single characters and key-strokes"
+name = "getkey"
+optional = false
+python-versions = "*"
+version = "0.6.5"
+
+[[package]]
+category = "main"
 description = "Cross-platform lib for process and system monitoring in Python."
 name = "psutil"
 optional = false
@@ -18,7 +26,7 @@ version = "5.7.2"
 test = ["ipaddress", "mock", "unittest2", "enum34", "pywin32", "wmi"]
 
 [metadata]
-content-hash = "6e3b63d843deb4384e551e0170551cc4ea2719c501b4065c320b9f5785974925"
+content-hash = "47abd2479c8dafbc35f374ad717b13173035504e826e17ff4ca822fb5b0cb0b6"
 python-versions = "^3.8"
 
 [metadata.files]
@@ -26,6 +34,9 @@ end = [
     {file = "end-1.3.1-py2-none-any.whl", hash = "sha256:22aac16c2d7cccbcb3b201d4a880b50817647f51560d31ae995e30051e9891cf"},
     {file = "end-1.3.1-py3-none-any.whl", hash = "sha256:8332fb4a1250e25c39f23cb5d05a8599539b85004a9b43b571bc904135c05539"},
     {file = "end-1.3.1.tar.gz", hash = "sha256:fe6c712a37077db00fdc34ba84554f36275b9d1efbf598411e9471ef67275b1e"},
+]
+getkey = [
+    {file = "getkey-0.6.5.tar.gz", hash = "sha256:68c7c702c3b34deacf427f6c0f1fd66c5c2aa12d7801aa32442fc1a71c8ce059"},
 ]
 psutil = [
     {file = "psutil-5.7.2-cp27-none-win32.whl", hash = "sha256:f2018461733b23f308c298653c8903d32aaad7873d25e1d228765e91ae42c3f2"},

@@ -1,1 +1,3 @@
-modify a user's password
+#namepasswd - modify a user's password#name
+#synopsispasswd [username]#synopsis
+#descriptionThe passwd command changes passwords for user accounts.#description
