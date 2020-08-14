@@ -36,6 +36,27 @@ def MainCommand():
               if(len(I.split("#options"))==3):
                 print("OPTIONS")
                 print("       "+I.split("#options")[1].replace("\l","\n")+"\n")
+              if(len(I.split("#seealso"))==3):
+                print("SEE ALSO")
+                print("       "+I.split("#seealso")[1].replace("\l","\n")+"\n")
+              if(len(I.split("#exitstatus"))==3):
+                print("EXIT STATUS")
+                print("       "+I.split("#exitstatus")[1].replace("\l","\n")+"\n")
+              if(len(I.split("#examples"))==3):
+                print("EXAMPLES")
+                print("       "+I.split("#examples")[1].replace("\l","\n")+"\n")
+              if(len(I.split("#history"))==3):
+                print("HISTORY")
+                print("       "+I.split("#history")[1].replace("\l","\n")+"\n")
+              if(len(I.split("#bugs"))==3):
+                print("BUGS")
+                print("       "+I.split("#bugs")[1].replace("\l","\n")+"\n")
+              if(len(I.split("#standards"))==3):
+                print("STANDARDS")
+                print("       "+I.split("#standards")[1].replace("\l","\n")+"\n")
+              if(len(I.split("#exitvalues"))==3):
+                print("EXIT VALUES")
+                print("       "+I.split("#exitvalues")[1].replace("\l","\n")+"\n")
               #.replace("#BLUE","\033[38;5;27m").replace("#RESET","\033[39m")
             print("\n\x1b[6;30;47m(END)\n\x1b[0m")
             doPrint = True
@@ -57,6 +78,28 @@ def MainCommand():
               if(len(I.split("#options"))==3):
                 print("OPTIONS")
                 print("       "+I.split("#options")[1].replace("\l","\n")+"\n")
+              if(len(I.split("#seealso"))==3):
+                print("SEE ALSO")
+                print("       "+I.split("#seealso")[1].replace("\l","\n")+"\n")
+              if(len(I.split("#exitstatus"))==3):
+                print("EXIT STATUS")
+                print("       "+I.split("#exitstatus")[1].replace("\l","\n")+"\n")
+              if(len(I.split("#examples"))==3):
+                print("EXAMPLES")
+                print("       "+I.split("#examples")[1].replace("\l","\n")+"\n")
+              if(len(I.split("#history"))==3):
+                print("HISTORY")
+                print("       "+I.split("#history")[1].replace("\l","\n")+"\n")
+              if(len(I.split("#bugs"))==3):
+                print("BUGS")
+                print("       "+I.split("#bugs")[1].replace("\l","\n")+"\n")
+              if(len(I.split("#standards"))==3):
+                print("STANDARDS")
+                print("       "+I.split("#standards")[1].replace("\l","\n")+"\n")
+              if(len(I.split("#exitvalues"))==3):
+                print("EXIT VALUES")
+                print("       "+I.split("#exitvalues")[1].replace("\l","\n")+"\n")
+              #.replace("#BLUE","\033[38;5;27m").replace("#RESET","\033[39m")
               #.replace("#BLUE","\033[38;5;27m").replace("#RESET","\033[39m").replace("#PINK","\033[38;5;201m").replace("#RED","\033[38;5;1m").replace("#YELLOW","\033[38;5;11m")
             print("\x1b[6;30;47m(END)\x1b[0m")
             doPrint = True
