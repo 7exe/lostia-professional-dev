@@ -30,7 +30,22 @@ def MainCommand():
                 curlString+="       "+I.split("<name>")[1].replace("\l","\n")+"\n\n"
               if(len(I.split("<synopsis>"))==3):
                 curlString+="SYNOPSIS\n"
-                curlString+="       "+I.split("<synopsis>")[1].replace("\l","\n")+"\n\n"
+                word1 = "["
+                word2 = "]"
+                s = I.split("<synopsis>")[1].replace("\l","\n")+"\n\n"
+                newText = s
+                text1 = s.split(word1)
+                if(len(text1)>1):
+                  count=0
+                  for I in range(len(text1)):
+                    text2 = text1[count].split(word2)
+                    if(len(text2)>0):
+                      if(count==0):
+                        pass
+                      else:
+                        newText=newText.replace(text2[0],"\033[4m"+text2[0]+"\033[0m")
+                    count+=1
+                curlString+="       "+newText
               if(len(I.split("<description>"))==3):
                 curlString+="DESCRIPTION\n"
                 curlString+="       "+I.split("<description>")[1]+"\l".replace("\l","\n")+"\n\n"
@@ -76,7 +91,22 @@ def MainCommand():
                 curlString+="       "+I.split("<name>")[1].replace("\l","\n")+"\n\n"
               if(len(I.split("<synopsis>"))==3):
                 curlString+="SYNOPSIS\n"
-                curlString+="       "+I.split("<synopsis>")[1].replace("\l","\n")+"\n\n"
+                word1 = "["
+                word2 = "]"
+                s = I.split("<synopsis>")[1].replace("\l","\n")+"\n\n"
+                newText = s
+                text1 = s.split(word1)
+                if(len(text1)>1):
+                  count=0
+                  for D in range(len(text1)):
+                    text2 = text1[count].split(word2)
+                    if(len(text2)>0):
+                      if(count==0):
+                        pass
+                      else:
+                        newText=newText.replace(text2[0],"\033[4m"+text2[0]+"\033[0m")
+                    count+=1
+                curlString+="       "+newText
               if(len(I.split("<description>"))==3):
                 curlString+="DESCRIPTION\n"
                 curlString+="       "+I.split("<description>")[1].replace("\l","\n")+"\n\n"

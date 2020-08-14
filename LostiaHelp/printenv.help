@@ -1,0 +1,5 @@
+<name>printenv - print all or part of environment<name>
+<synopsis>printenv [OPTION]... [VARIABLE]...<synopsis>
+<description>Print  the values of the specified environment VARIABLE(s).  If no VARIABLE is specified, print name and value pairs for them all.<description>
+<options>-0, --null      end each output line with NUL, not newline<options>
+<author>Written by Elliot Singh for the Ash project<author>
