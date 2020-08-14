@@ -1,4 +1,4 @@
-#namelistusers - list all users added to ash#name
-#synopsislistusers#synopsis
-#descriptionlists all users that has been added to the ash shell#description
-#options-SH      shows hidden users\l\l       -L      prints users in list format#options
+<name>listusers - list all users added to ash<name>
+<synopsis>listusers<synopsis>
+<description>lists all users that has been added to the ash shell<description>
+<options>-SH      shows hidden users\l\l       -L      prints users in list format<options>

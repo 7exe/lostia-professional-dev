@@ -1,3 +1,3 @@
-#namepwd - print name of current/working directory#name
-#synopsispasswd#synopsis
-#descriptionPrint the full filename of the current working directory.#description
+<name>pwd - print name of current/working directory<name>
+<synopsis>passwd<synopsis>
+<description>Print the full filename of the current working directory.<description>

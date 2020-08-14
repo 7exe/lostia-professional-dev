@@ -1,3 +1,3 @@
-#namemodules - Used to enable/disable command modules#name
-#synopsismodules#synopsis
-#descriptionopens the module manager where you can enable/disable command modules#description
+<name>modules - Used to enable/disable command modules<name>
+<synopsis>modules<synopsis>
+<description>opens the module manager where you can enable/disable command modules<description>

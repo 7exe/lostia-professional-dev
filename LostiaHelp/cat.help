@@ -1,3 +1,3 @@
-#namecat - print file contents#name
-#synopsiscat [file]#synopsis
-#descriptionprint file contents or concatenate files (Not added in the current version of ash)#description
+<name>cat - print file contents<name>
+<synopsis>cat [file]<synopsis>
+<description>print file contents or concatenate files (Not added in the current version of ash)<description>

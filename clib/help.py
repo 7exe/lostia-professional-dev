@@ -23,40 +23,41 @@ def MainCommand():
         for I in Modules:
           if(I.replace("\n","") == sys.argv[1]):
             Help = open("LostiaHelp/"+sys.argv[1]+".help").readlines()
+  
             for I in Help:
-              if(len(I.split("#name"))==3):
+              if(len(I.split("<name>"))==3):
                 print("NAME")
-                print("       "+I.split("#name")[1].replace("\l","\n")+"\n")
-              if(len(I.split("#synopsis"))==3):
+                print("       "+I.split("<name>")[1].replace("\l","\n")+"\n")
+              if(len(I.split("<synopsis>"))==3):
                 print("SYNOPSIS")
-                print("       "+I.split("#synopsis")[1].replace("\l","\n")+"\n")
-              if(len(I.split("#description"))==3):
+                print("       "+I.split("<synopsis>")[1].replace("\l","\n")+"\n")
+              if(len(I.split("<description>"))==3):
                 print("DESCRIPTION")
-                print("       "+I.split("#description")[1].replace("\l","\n")+"\n")
-              if(len(I.split("#options"))==3):
+                print("       "+I.split("<description>")[1].replace("\l","\n")+"\n")
+              if(len(I.split("<options>"))==3):
                 print("OPTIONS")
-                print("       "+I.split("#options")[1].replace("\l","\n")+"\n")
-              if(len(I.split("#seealso"))==3):
+                print("       "+I.split("<options>")[1].replace("\l","\n")+"\n")
+              if(len(I.split("<seealso>"))==3):
                 print("SEE ALSO")
-                print("       "+I.split("#seealso")[1].replace("\l","\n")+"\n")
-              if(len(I.split("#exitstatus"))==3):
+                print("       "+I.split("<seealso>")[1].replace("\l","\n")+"\n")
+              if(len(I.split("<exitstatus>"))==3):
                 print("EXIT STATUS")
-                print("       "+I.split("#exitstatus")[1].replace("\l","\n")+"\n")
-              if(len(I.split("#examples"))==3):
+                print("       "+I.split("<exitstatu>")[1].replace("\l","\n")+"\n")
+              if(len(I.split("<examples>"))==3):
                 print("EXAMPLES")
-                print("       "+I.split("#examples")[1].replace("\l","\n")+"\n")
-              if(len(I.split("#history"))==3):
+                print("       "+I.split("<examples>")[1].replace("\l","\n")+"\n")
+              if(len(I.split("<history>"))==3):
                 print("HISTORY")
-                print("       "+I.split("#history")[1].replace("\l","\n")+"\n")
-              if(len(I.split("#bugs"))==3):
+                print("       "+I.split("<history>")[1].replace("\l","\n")+"\n")
+              if(len(I.split("<bugs>"))==3):
                 print("BUGS")
-                print("       "+I.split("#bugs")[1].replace("\l","\n")+"\n")
-              if(len(I.split("#standards"))==3):
+                print("       "+I.split("<bugs>")[1].replace("\l","\n")+"\n")
+              if(len(I.split("<standards>"))==3):
                 print("STANDARDS")
-                print("       "+I.split("#standards")[1].replace("\l","\n")+"\n")
-              if(len(I.split("#exitvalues"))==3):
+                print("       "+I.split("<standards>")[1].replace("\l","\n")+"\n")
+              if(len(I.split("<exitvalues>"))==3):
                 print("EXIT VALUES")
-                print("       "+I.split("#exitvalues")[1].replace("\l","\n")+"\n")
+                print("       "+I.split("<exitvalues>")[1].replace("\l","\n")+"\n")
               #.replace("#BLUE","\033[38;5;27m").replace("#RESET","\033[39m")
             print("\n\x1b[6;30;47m(END)\n\x1b[0m")
             doPrint = True
@@ -66,39 +67,39 @@ def MainCommand():
           if(I.replace("\n","") == sys.argv[1]):
             Help = open("LostiaHelp/"+sys.argv[1]+".help").readlines()
             for I in Help:
-              if(len(I.split("#name"))==3):
+              if(len(I.split("<name>"))==3):
                 print("NAME")
-                print("       "+I.split("#name")[1].replace("\l","\n")+"\n")
-              if(len(I.split("#synopsis"))==3):
+                print("       "+I.split("<name>")[1].replace("\l","\n")+"\n")
+              if(len(I.split("<synopsis>"))==3):
                 print("SYNOPSIS")
-                print("       "+I.split("#synopsis")[1].replace("\l","\n")+"\n")
-              if(len(I.split("#description"))==3):
+                print("       "+I.split("<synopsis>")[1].replace("\l","\n")+"\n")
+              if(len(I.split("<description>"))==3):
                 print("DESCRIPTION")
-                print("       "+I.split("#description")[1].replace("\l","\n")+"\n")
-              if(len(I.split("#options"))==3):
+                print("       "+I.split("<description>")[1].replace("\l","\n")+"\n")
+              if(len(I.split("<options>"))==3):
                 print("OPTIONS")
-                print("       "+I.split("#options")[1].replace("\l","\n")+"\n")
-              if(len(I.split("#seealso"))==3):
+                print("       "+I.split("<options>")[1].replace("\l","\n")+"\n")
+              if(len(I.split("<seealso>"))==3):
                 print("SEE ALSO")
-                print("       "+I.split("#seealso")[1].replace("\l","\n")+"\n")
-              if(len(I.split("#exitstatus"))==3):
+                print("       "+I.split("<seealso>")[1].replace("\l","\n")+"\n")
+              if(len(I.split("<exitstatus>"))==3):
                 print("EXIT STATUS")
-                print("       "+I.split("#exitstatus")[1].replace("\l","\n")+"\n")
-              if(len(I.split("#examples"))==3):
+                print("       "+I.split("<exitstatu>")[1].replace("\l","\n")+"\n")
+              if(len(I.split("<examples>"))==3):
                 print("EXAMPLES")
-                print("       "+I.split("#examples")[1].replace("\l","\n")+"\n")
-              if(len(I.split("#history"))==3):
+                print("       "+I.split("<examples>")[1].replace("\l","\n")+"\n")
+              if(len(I.split("<history>"))==3):
                 print("HISTORY")
-                print("       "+I.split("#history")[1].replace("\l","\n")+"\n")
-              if(len(I.split("#bugs"))==3):
+                print("       "+I.split("<history>")[1].replace("\l","\n")+"\n")
+              if(len(I.split("<bugs>"))==3):
                 print("BUGS")
-                print("       "+I.split("#bugs")[1].replace("\l","\n")+"\n")
-              if(len(I.split("#standards"))==3):
+                print("       "+I.split("<bugs>")[1].replace("\l","\n")+"\n")
+              if(len(I.split("<standards>"))==3):
                 print("STANDARDS")
-                print("       "+I.split("#standards")[1].replace("\l","\n")+"\n")
-              if(len(I.split("#exitvalues"))==3):
+                print("       "+I.split("<standards>")[1].replace("\l","\n")+"\n")
+              if(len(I.split("<exitvalues>"))==3):
                 print("EXIT VALUES")
-                print("       "+I.split("#exitvalues")[1].replace("\l","\n")+"\n")
+                print("       "+I.split("<exitvalues>")[1].replace("\l","\n")+"\n")
               #.replace("#BLUE","\033[38;5;27m").replace("#RESET","\033[39m")
               #.replace("#BLUE","\033[38;5;27m").replace("#RESET","\033[39m").replace("#PINK","\033[38;5;201m").replace("#RED","\033[38;5;1m").replace("#YELLOW","\033[38;5;11m")
             print("\x1b[6;30;47m(END)\x1b[0m")
@@ -119,7 +120,7 @@ def MainCommand():
           filepath = os.path.join(folder, file)
           f = open(filepath, 'r')
           try:
-            print("%-12s %s" %(file.replace(".help",""),f.read().split("#description")[1]))
+            print("%-12s %s" %(file.replace(".help",""),f.read().split("<description>")[1]))
           except IndexError:
             pass
           #.replace("#BLUE","").replace("#RESET","").replace("#PINK","").replace("#RED","").replace("#YELLOW","")

@@ -1,3 +1,3 @@
-#nameadduser - add a user to ash#name
-#synopsisadduser [username] [permission (Optional)]#synopsis
-#descriptionadds a user to ash and with a permission if specified (default is 'user')#description
+<name>adduser - add a user to ash<name>
+<synopsis>adduser [username] [permission (Optional)]<synopsis>
+<description>adds a user to ash and with a permission if specified (default is 'user')<description>

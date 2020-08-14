@@ -1,3 +1,3 @@
-#nametop - display and update sorted information about processes#name
-#synopsistop#synopsis
-#descriptionThe  top  program  provides  a dynamic real-time view of a running system.#description
+<name>top - display and update sorted information about processes<name>
+<synopsis>top<synopsis>
+<description>The  top  program  provides  a dynamic real-time view of a running system.<description>

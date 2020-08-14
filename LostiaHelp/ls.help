@@ -1,4 +1,4 @@
-#namels - list directory contents#name
-#synopsisls#synopsis
-#descriptionlist the directory contents of the current working directory#description
-#options-LA       list contents in list format (not added in the current version of ash)#options
+<name>ls - list directory contents<name>
+<synopsis>ls<synopsis>
+<description>list the directory contents of the current working directory<description>
+<options>-LA       list contents in list format (not added in the current version of ash)<options>
