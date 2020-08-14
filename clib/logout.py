@@ -34,6 +34,8 @@ if(currentdata != "guest"):
     newData.write("\n"+currentUser)
     newData.close()
 
+  #Guess i should put a reference here
+
 
   end(sys.argv)
 else:

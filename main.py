@@ -161,3 +161,6 @@ with open("LostiaFiles/.ash_env_value","a") as newData:
 
 print("Lostia Software, Ash\nVersion 1.4.1, Alpha C")
 os.system("python LostiaMain/commandhandler.py")
+
+
+#Why can't you eliminate Satan from Linux? Because 666 isn't executable.
