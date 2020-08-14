@@ -1,0 +1,3 @@
+<name>date - print or set the system date and time<name>
+<synopsis>date<synopsis>
+<description>Display the current time in the given FORMAT(format not added in the current version of ash), or set the system date. (setting system date not added in the current version of ash)<description>
