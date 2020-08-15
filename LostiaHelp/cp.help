@@ -1,3 +1,3 @@
 <name>cp - copy files and directories<name>
-<synopsis>cp [source file] [target]<synopsis>
+<synopsis><b>cp</b> [<u>source file</u>] [<u>target</u>]<synopsis>
 <description>copy files and their contents to a new file with the set name and directory<description>

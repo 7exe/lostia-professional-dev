@@ -1,3 +1,4 @@
 <name>adduser - add a user to ash<name>
-<synopsis>adduser [username] [permission (Optional)]<synopsis>
+<synopsis><b>adduser</b> [<u>username</u>] [<u>permission</u> (Optional)]<synopsis>
 <description>adds a user to ash and with a permission if specified (default is 'user')<description>
+<seealso><b>deluser</b><seealso>

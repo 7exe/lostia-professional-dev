@@ -28,28 +28,28 @@ def MainCommand():
               if(len(I.split("<name>"))==3):
                 curlString+="\033[1mNAME\033[0m\n"
                 s = I.split("<name>")[1].replace("\l","\n")+"\n\n"
-                word1 = "<b>"
-                word2 = "</b>"
+                split1 = "<b>"
+                split2 = "</b>"
                 newText = s
-                text1 = s.split(word1)
+                text1 = s.split(split1)
                 if(len(text1)>1):
                   count=0
                   for B in range(len(text1)):
-                    text2 = text1[count].split(word2)
+                    text2 = text1[count].split(split2)
                     if(len(text2)>0):
                       if(count==0):
                         pass
                       else:
                         newText=newText.replace("<b>"+text2[0]+"</b>","\033[1m"+text2[0]+"\033[0m")
                     count+=1
-                word1 = "<u>"
-                word2 = "</u>"
+                split1 = "<u>"
+                split2 = "</u>"
                 newText2 = newText
-                text1 = s.split(word1)
+                text1 = s.split(split1)
                 if(len(text1)>1):
                   count=0
                   for D in range(len(text1)):
-                    text2 = text1[count].split(word2)
+                    text2 = text1[count].split(split2)
                     if(len(text2)>0):
                       if(count==0):
                         pass
@@ -60,28 +60,28 @@ def MainCommand():
               if(len(I.split("<synopsis>"))==3):
                 curlString+="\033[1mSYNOPSIS\033[0m\n"
                 s = I.split("<synopsis>")[1].replace("\l","\n")+"\n\n"
-                word1 = "<b>"
-                word2 = "</b>"
+                split1 = "<b>"
+                split2 = "</b>"
                 newText = s
-                text1 = s.split(word1)
+                text1 = s.split(split1)
                 if(len(text1)>1):
                   count=0
                   for B in range(len(text1)):
-                    text2 = text1[count].split(word2)
+                    text2 = text1[count].split(split2)
                     if(len(text2)>0):
                       if(count==0):
                         pass
                       else:
                         newText=newText.replace("<b>"+text2[0]+"</b>","\033[1m"+text2[0]+"\033[0m")
                     count+=1
-                word1 = "<u>"
-                word2 = "</u>"
+                split1 = "<u>"
+                split2 = "</u>"
                 newText2 = newText
-                text1 = s.split(word1)
+                text1 = s.split(split1)
                 if(len(text1)>1):
                   count=0
                   for D in range(len(text1)):
-                    text2 = text1[count].split(word2)
+                    text2 = text1[count].split(split2)
                     if(len(text2)>0):
                       if(count==0):
                         pass
@@ -92,28 +92,28 @@ def MainCommand():
               if(len(I.split("<description>"))==3):
                 curlString+="\033[1mDESCRIPTION\033[0m\n"
                 s = I.split("<description>")[1].replace("\l","\n")+"\n\n"
-                word1 = "<b>"
-                word2 = "</b>"
+                split1 = "<b>"
+                split2 = "</b>"
                 newText = s
-                text1 = s.split(word1)
+                text1 = s.split(split1)
                 if(len(text1)>1):
                   count=0
                   for B in range(len(text1)):
-                    text2 = text1[count].split(word2)
+                    text2 = text1[count].split(split2)
                     if(len(text2)>0):
                       if(count==0):
                         pass
                       else:
                         newText=newText.replace("<b>"+text2[0]+"</b>","\033[1m"+text2[0]+"\033[0m")
                     count+=1
-                word1 = "<u>"
-                word2 = "</u>"
+                split1 = "<u>"
+                split2 = "</u>"
                 newText2 = newText
-                text1 = s.split(word1)
+                text1 = s.split(split1)
                 if(len(text1)>1):
                   count=0
                   for D in range(len(text1)):
-                    text2 = text1[count].split(word2)
+                    text2 = text1[count].split(split2)
                     if(len(text2)>0):
                       if(count==0):
                         pass
@@ -124,28 +124,28 @@ def MainCommand():
               if(len(I.split("<options>"))==3):
                 curlString+="\033[1mOPTIONS\033[0m\n"
                 s = I.split("<options>")[1].replace("\l","\n")+"\n\n"
-                word1 = "<b>"
-                word2 = "</b>"
+                split1 = "<b>"
+                split2 = "</b>"
                 newText = s
-                text1 = s.split(word1)
+                text1 = s.split(split1)
                 if(len(text1)>1):
                   count=0
                   for B in range(len(text1)):
-                    text2 = text1[count].split(word2)
+                    text2 = text1[count].split(split2)
                     if(len(text2)>0):
                       if(count==0):
                         pass
                       else:
                         newText=newText.replace("<b>"+text2[0]+"</b>","\033[1m"+text2[0]+"\033[0m")
                     count+=1
-                word1 = "<u>"
-                word2 = "</u>"
+                split1 = "<u>"
+                split2 = "</u>"
                 newText2 = newText
-                text1 = s.split(word1)
+                text1 = s.split(split1)
                 if(len(text1)>1):
                   count=0
                   for D in range(len(text1)):
-                    text2 = text1[count].split(word2)
+                    text2 = text1[count].split(split2)
                     if(len(text2)>0):
                       if(count==0):
                         pass
@@ -156,28 +156,28 @@ def MainCommand():
               if(len(I.split("<seealso>"))==3):
                 curlString+="\033[1mSEE ALSO\033[0m\n"
                 s = I.split("<seealso>")[1].replace("\l","\n")+"\n\n"
-                word1 = "<b>"
-                word2 = "</b>"
+                split1 = "<b>"
+                split2 = "</b>"
                 newText = s
-                text1 = s.split(word1)
+                text1 = s.split(split1)
                 if(len(text1)>1):
                   count=0
                   for B in range(len(text1)):
-                    text2 = text1[count].split(word2)
+                    text2 = text1[count].split(split2)
                     if(len(text2)>0):
                       if(count==0):
                         pass
                       else:
                         newText=newText.replace("<b>"+text2[0]+"</b>","\033[1m"+text2[0]+"\033[0m")
                     count+=1
-                word1 = "<u>"
-                word2 = "</u>"
+                split1 = "<u>"
+                split2 = "</u>"
                 newText2 = newText
-                text1 = s.split(word1)
+                text1 = s.split(split1)
                 if(len(text1)>1):
                   count=0
                   for D in range(len(text1)):
-                    text2 = text1[count].split(word2)
+                    text2 = text1[count].split(split2)
                     if(len(text2)>0):
                       if(count==0):
                         pass
@@ -188,28 +188,28 @@ def MainCommand():
               if(len(I.split("<exitstatus>"))==3):
                 curlString+="\033[1mEXIT STATUS\033[0m\n"
                 s = I.split("<exitstatus>")[1].replace("\l","\n")+"\n\n"
-                word1 = "<b>"
-                word2 = "</b>"
+                split1 = "<b>"
+                split2 = "</b>"
                 newText = s
-                text1 = s.split(word1)
+                text1 = s.split(split1)
                 if(len(text1)>1):
                   count=0
                   for B in range(len(text1)):
-                    text2 = text1[count].split(word2)
+                    text2 = text1[count].split(split2)
                     if(len(text2)>0):
                       if(count==0):
                         pass
                       else:
                         newText=newText.replace("<b>"+text2[0]+"</b>","\033[1m"+text2[0]+"\033[0m")
                     count+=1
-                word1 = "<u>"
-                word2 = "</u>"
+                split1 = "<u>"
+                split2 = "</u>"
                 newText2 = newText
-                text1 = s.split(word1)
+                text1 = s.split(split1)
                 if(len(text1)>1):
                   count=0
                   for D in range(len(text1)):
-                    text2 = text1[count].split(word2)
+                    text2 = text1[count].split(split2)
                     if(len(text2)>0):
                       if(count==0):
                         pass
@@ -220,28 +220,28 @@ def MainCommand():
               if(len(I.split("<examples>"))==3):
                 curlString+="\033[1mEXAMPLES\033[0m\n"
                 s = I.split("<examples>")[1].replace("\l","\n")+"\n\n"
-                word1 = "<b>"
-                word2 = "</b>"
+                split1 = "<b>"
+                split2 = "</b>"
                 newText = s
-                text1 = s.split(word1)
+                text1 = s.split(split1)
                 if(len(text1)>1):
                   count=0
                   for B in range(len(text1)):
-                    text2 = text1[count].split(word2)
+                    text2 = text1[count].split(split2)
                     if(len(text2)>0):
                       if(count==0):
                         pass
                       else:
                         newText=newText.replace("<b>"+text2[0]+"</b>","\033[1m"+text2[0]+"\033[0m")
                     count+=1
-                word1 = "<u>"
-                word2 = "</u>"
+                split1 = "<u>"
+                split2 = "</u>"
                 newText2 = newText
-                text1 = s.split(word1)
+                text1 = s.split(split1)
                 if(len(text1)>1):
                   count=0
                   for D in range(len(text1)):
-                    text2 = text1[count].split(word2)
+                    text2 = text1[count].split(split2)
                     if(len(text2)>0):
                       if(count==0):
                         pass
@@ -252,28 +252,28 @@ def MainCommand():
               if(len(I.split("<history>"))==3):
                 curlString+="\033[1mHISTORY\033[0m\n"
                 s = I.split("<history>")[1].replace("\l","\n")+"\n\n"
-                word1 = "<b>"
-                word2 = "</b>"
+                split1 = "<b>"
+                split2 = "</b>"
                 newText = s
-                text1 = s.split(word1)
+                text1 = s.split(split1)
                 if(len(text1)>1):
                   count=0
                   for B in range(len(text1)):
-                    text2 = text1[count].split(word2)
+                    text2 = text1[count].split(split2)
                     if(len(text2)>0):
                       if(count==0):
                         pass
                       else:
                         newText=newText.replace("<b>"+text2[0]+"</b>","\033[1m"+text2[0]+"\033[0m")
                     count+=1
-                word1 = "<u>"
-                word2 = "</u>"
+                split1 = "<u>"
+                split2 = "</u>"
                 newText2 = newText
-                text1 = s.split(word1)
+                text1 = s.split(split1)
                 if(len(text1)>1):
                   count=0
                   for D in range(len(text1)):
-                    text2 = text1[count].split(word2)
+                    text2 = text1[count].split(split2)
                     if(len(text2)>0):
                       if(count==0):
                         pass
@@ -284,28 +284,28 @@ def MainCommand():
               if(len(I.split("<bugs>"))==3):
                 curlString+="\033[1mBUGS\033[0m\n"
                 s = I.split("<bugs>")[1].replace("\l","\n")+"\n\n"
-                word1 = "<b>"
-                word2 = "</b>"
+                split1 = "<b>"
+                split2 = "</b>"
                 newText = s
-                text1 = s.split(word1)
+                text1 = s.split(split1)
                 if(len(text1)>1):
                   count=0
                   for B in range(len(text1)):
-                    text2 = text1[count].split(word2)
+                    text2 = text1[count].split(split2)
                     if(len(text2)>0):
                       if(count==0):
                         pass
                       else:
                         newText=newText.replace("<b>"+text2[0]+"</b>","\033[1m"+text2[0]+"\033[0m")
                     count+=1
-                word1 = "<u>"
-                word2 = "</u>"
+                split1 = "<u>"
+                split2 = "</u>"
                 newText2 = newText
-                text1 = s.split(word1)
+                text1 = s.split(split1)
                 if(len(text1)>1):
                   count=0
                   for D in range(len(text1)):
-                    text2 = text1[count].split(word2)
+                    text2 = text1[count].split(split2)
                     if(len(text2)>0):
                       if(count==0):
                         pass
@@ -316,28 +316,28 @@ def MainCommand():
               if(len(I.split("<standards>"))==3):
                 curlString+="\033[1mSTANDARDS\033[0m\n"
                 s = I.split("<standards>")[1].replace("\l","\n")+"\n\n"
-                word1 = "<b>"
-                word2 = "</b>"
+                split1 = "<b>"
+                split2 = "</b>"
                 newText = s
-                text1 = s.split(word1)
+                text1 = s.split(split1)
                 if(len(text1)>1):
                   count=0
                   for B in range(len(text1)):
-                    text2 = text1[count].split(word2)
+                    text2 = text1[count].split(split2)
                     if(len(text2)>0):
                       if(count==0):
                         pass
                       else:
                         newText=newText.replace("<b>"+text2[0]+"</b>","\033[1m"+text2[0]+"\033[0m")
                     count+=1
-                word1 = "<u>"
-                word2 = "</u>"
+                split1 = "<u>"
+                split2 = "</u>"
                 newText2 = newText
-                text1 = s.split(word1)
+                text1 = s.split(split1)
                 if(len(text1)>1):
                   count=0
                   for D in range(len(text1)):
-                    text2 = text1[count].split(word2)
+                    text2 = text1[count].split(split2)
                     if(len(text2)>0):
                       if(count==0):
                         pass
@@ -348,28 +348,28 @@ def MainCommand():
               if(len(I.split("<exitvalues>"))==3):
                 curlString+="\033[1mEXIT VALUES\033[0m\n"
                 s = I.split("<exitvalues>")[1].replace("\l","\n")+"\n\n"
-                word1 = "<b>"
-                word2 = "</b>"
+                split1 = "<b>"
+                split2 = "</b>"
                 newText = s
-                text1 = s.split(word1)
+                text1 = s.split(split1)
                 if(len(text1)>1):
                   count=0
                   for B in range(len(text1)):
-                    text2 = text1[count].split(word2)
+                    text2 = text1[count].split(split2)
                     if(len(text2)>0):
                       if(count==0):
                         pass
                       else:
                         newText=newText.replace("<b>"+text2[0]+"</b>","\033[1m"+text2[0]+"\033[0m")
                     count+=1
-                word1 = "<u>"
-                word2 = "</u>"
+                split1 = "<u>"
+                split2 = "</u>"
                 newText2 = newText
-                text1 = s.split(word1)
+                text1 = s.split(split1)
                 if(len(text1)>1):
                   count=0
                   for D in range(len(text1)):
-                    text2 = text1[count].split(word2)
+                    text2 = text1[count].split(split2)
                     if(len(text2)>0):
                       if(count==0):
                         pass
@@ -380,28 +380,28 @@ def MainCommand():
               if(len(I.split("<author>"))==3):
                 curlString+="\033[1mAUTHOR\033[0m\n"
                 s = I.split("<author>")[1].replace("\l","\n")+"\n\n"
-                word1 = "<b>"
-                word2 = "</b>"
+                split1 = "<b>"
+                split2 = "</b>"
                 newText = s
-                text1 = s.split(word1)
+                text1 = s.split(split1)
                 if(len(text1)>1):
                   count=0
                   for B in range(len(text1)):
-                    text2 = text1[count].split(word2)
+                    text2 = text1[count].split(split2)
                     if(len(text2)>0):
                       if(count==0):
                         pass
                       else:
                         newText=newText.replace("<b>"+text2[0]+"</b>","\033[1m"+text2[0]+"\033[0m")
                     count+=1
-                word1 = "<u>"
-                word2 = "</u>"
+                split1 = "<u>"
+                split2 = "</u>"
                 newText2 = newText
-                text1 = s.split(word1)
+                text1 = s.split(split1)
                 if(len(text1)>1):
                   count=0
                   for D in range(len(text1)):
-                    text2 = text1[count].split(word2)
+                    text2 = text1[count].split(split2)
                     if(len(text2)>0):
                       if(count==0):
                         pass
@@ -422,28 +422,28 @@ def MainCommand():
               if(len(I.split("<name>"))==3):
                 curlString+="\033[1mNAME\033[0m\n"
                 s = I.split("<name>")[1].replace("\l","\n")+"\n\n"
-                word1 = "<b>"
-                word2 = "</b>"
+                split1 = "<b>"
+                split2 = "</b>"
                 newText = s
-                text1 = s.split(word1)
+                text1 = s.split(split1)
                 if(len(text1)>1):
                   count=0
                   for B in range(len(text1)):
-                    text2 = text1[count].split(word2)
+                    text2 = text1[count].split(split2)
                     if(len(text2)>0):
                       if(count==0):
                         pass
                       else:
                         newText=newText.replace("<b>"+text2[0]+"</b>","\033[1m"+text2[0]+"\033[0m")
                     count+=1
-                word1 = "<u>"
-                word2 = "</u>"
+                split1 = "<u>"
+                split2 = "</u>"
                 newText2 = newText
-                text1 = s.split(word1)
+                text1 = s.split(split1)
                 if(len(text1)>1):
                   count=0
                   for D in range(len(text1)):
-                    text2 = text1[count].split(word2)
+                    text2 = text1[count].split(split2)
                     if(len(text2)>0):
                       if(count==0):
                         pass
@@ -454,28 +454,28 @@ def MainCommand():
               if(len(I.split("<synopsis>"))==3):
                 curlString+="\033[1mSYNOPSIS\033[0m\n"
                 s = I.split("<synopsis>")[1].replace("\l","\n")+"\n\n"
-                word1 = "<b>"
-                word2 = "</b>"
+                split1 = "<b>"
+                split2 = "</b>"
                 newText = s
-                text1 = s.split(word1)
+                text1 = s.split(split1)
                 if(len(text1)>1):
                   count=0
                   for B in range(len(text1)):
-                    text2 = text1[count].split(word2)
+                    text2 = text1[count].split(split2)
                     if(len(text2)>0):
                       if(count==0):
                         pass
                       else:
                         newText=newText.replace("<b>"+text2[0]+"</b>","\033[1m"+text2[0]+"\033[0m")
                     count+=1
-                word1 = "<u>"
-                word2 = "</u>"
+                split1 = "<u>"
+                split2 = "</u>"
                 newText2 = newText
-                text1 = s.split(word1)
+                text1 = s.split(split1)
                 if(len(text1)>1):
                   count=0
                   for D in range(len(text1)):
-                    text2 = text1[count].split(word2)
+                    text2 = text1[count].split(split2)
                     if(len(text2)>0):
                       if(count==0):
                         pass
@@ -486,28 +486,28 @@ def MainCommand():
               if(len(I.split("<description>"))==3):
                 curlString+="\033[1mDESCRIPTION\033[0m\n"
                 s = I.split("<description>")[1].replace("\l","\n")+"\n\n"
-                word1 = "<b>"
-                word2 = "</b>"
+                split1 = "<b>"
+                split2 = "</b>"
                 newText = s
-                text1 = s.split(word1)
+                text1 = s.split(split1)
                 if(len(text1)>1):
                   count=0
                   for B in range(len(text1)):
-                    text2 = text1[count].split(word2)
+                    text2 = text1[count].split(split2)
                     if(len(text2)>0):
                       if(count==0):
                         pass
                       else:
                         newText=newText.replace("<b>"+text2[0]+"</b>","\033[1m"+text2[0]+"\033[0m")
                     count+=1
-                word1 = "<u>"
-                word2 = "</u>"
+                split1 = "<u>"
+                split2 = "</u>"
                 newText2 = newText
-                text1 = s.split(word1)
+                text1 = s.split(split1)
                 if(len(text1)>1):
                   count=0
                   for D in range(len(text1)):
-                    text2 = text1[count].split(word2)
+                    text2 = text1[count].split(split2)
                     if(len(text2)>0):
                       if(count==0):
                         pass
@@ -518,28 +518,28 @@ def MainCommand():
               if(len(I.split("<options>"))==3):
                 curlString+="\033[1mOPTIONS\033[0m\n"
                 s = I.split("<options>")[1].replace("\l","\n")+"\n\n"
-                word1 = "<b>"
-                word2 = "</b>"
+                split1 = "<b>"
+                split2 = "</b>"
                 newText = s
-                text1 = s.split(word1)
+                text1 = s.split(split1)
                 if(len(text1)>1):
                   count=0
                   for B in range(len(text1)):
-                    text2 = text1[count].split(word2)
+                    text2 = text1[count].split(split2)
                     if(len(text2)>0):
                       if(count==0):
                         pass
                       else:
                         newText=newText.replace("<b>"+text2[0]+"</b>","\033[1m"+text2[0]+"\033[0m")
                     count+=1
-                word1 = "<u>"
-                word2 = "</u>"
+                split1 = "<u>"
+                split2 = "</u>"
                 newText2 = newText
-                text1 = s.split(word1)
+                text1 = s.split(split1)
                 if(len(text1)>1):
                   count=0
                   for D in range(len(text1)):
-                    text2 = text1[count].split(word2)
+                    text2 = text1[count].split(split2)
                     if(len(text2)>0):
                       if(count==0):
                         pass
@@ -550,28 +550,28 @@ def MainCommand():
               if(len(I.split("<seealso>"))==3):
                 curlString+="\033[1mSEE ALSO\033[0m\n"
                 s = I.split("<seealso>")[1].replace("\l","\n")+"\n\n"
-                word1 = "<b>"
-                word2 = "</b>"
+                split1 = "<b>"
+                split2 = "</b>"
                 newText = s
-                text1 = s.split(word1)
+                text1 = s.split(split1)
                 if(len(text1)>1):
                   count=0
                   for B in range(len(text1)):
-                    text2 = text1[count].split(word2)
+                    text2 = text1[count].split(split2)
                     if(len(text2)>0):
                       if(count==0):
                         pass
                       else:
                         newText=newText.replace("<b>"+text2[0]+"</b>","\033[1m"+text2[0]+"\033[0m")
                     count+=1
-                word1 = "<u>"
-                word2 = "</u>"
+                split1 = "<u>"
+                split2 = "</u>"
                 newText2 = newText
-                text1 = s.split(word1)
+                text1 = s.split(split1)
                 if(len(text1)>1):
                   count=0
                   for D in range(len(text1)):
-                    text2 = text1[count].split(word2)
+                    text2 = text1[count].split(split2)
                     if(len(text2)>0):
                       if(count==0):
                         pass
@@ -582,28 +582,28 @@ def MainCommand():
               if(len(I.split("<exitstatus>"))==3):
                 curlString+="\033[1mEXIT STATUS\033[0m\n"
                 s = I.split("<exitstatus>")[1].replace("\l","\n")+"\n\n"
-                word1 = "<b>"
-                word2 = "</b>"
+                split1 = "<b>"
+                split2 = "</b>"
                 newText = s
-                text1 = s.split(word1)
+                text1 = s.split(split1)
                 if(len(text1)>1):
                   count=0
                   for B in range(len(text1)):
-                    text2 = text1[count].split(word2)
+                    text2 = text1[count].split(split2)
                     if(len(text2)>0):
                       if(count==0):
                         pass
                       else:
                         newText=newText.replace("<b>"+text2[0]+"</b>","\033[1m"+text2[0]+"\033[0m")
                     count+=1
-                word1 = "<u>"
-                word2 = "</u>"
+                split1 = "<u>"
+                split2 = "</u>"
                 newText2 = newText
-                text1 = s.split(word1)
+                text1 = s.split(split1)
                 if(len(text1)>1):
                   count=0
                   for D in range(len(text1)):
-                    text2 = text1[count].split(word2)
+                    text2 = text1[count].split(split2)
                     if(len(text2)>0):
                       if(count==0):
                         pass
@@ -614,28 +614,28 @@ def MainCommand():
               if(len(I.split("<examples>"))==3):
                 curlString+="\033[1mEXAMPLES\033[0m\n"
                 s = I.split("<examples>")[1].replace("\l","\n")+"\n\n"
-                word1 = "<b>"
-                word2 = "</b>"
+                split1 = "<b>"
+                split2 = "</b>"
                 newText = s
-                text1 = s.split(word1)
+                text1 = s.split(split1)
                 if(len(text1)>1):
                   count=0
                   for B in range(len(text1)):
-                    text2 = text1[count].split(word2)
+                    text2 = text1[count].split(split2)
                     if(len(text2)>0):
                       if(count==0):
                         pass
                       else:
                         newText=newText.replace("<b>"+text2[0]+"</b>","\033[1m"+text2[0]+"\033[0m")
                     count+=1
-                word1 = "<u>"
-                word2 = "</u>"
+                split1 = "<u>"
+                split2 = "</u>"
                 newText2 = newText
-                text1 = s.split(word1)
+                text1 = s.split(split1)
                 if(len(text1)>1):
                   count=0
                   for D in range(len(text1)):
-                    text2 = text1[count].split(word2)
+                    text2 = text1[count].split(split2)
                     if(len(text2)>0):
                       if(count==0):
                         pass
@@ -646,28 +646,28 @@ def MainCommand():
               if(len(I.split("<history>"))==3):
                 curlString+="\033[1mHISTORY\033[0m\n"
                 s = I.split("<history>")[1].replace("\l","\n")+"\n\n"
-                word1 = "<b>"
-                word2 = "</b>"
+                split1 = "<b>"
+                split2 = "</b>"
                 newText = s
-                text1 = s.split(word1)
+                text1 = s.split(split1)
                 if(len(text1)>1):
                   count=0
                   for B in range(len(text1)):
-                    text2 = text1[count].split(word2)
+                    text2 = text1[count].split(split2)
                     if(len(text2)>0):
                       if(count==0):
                         pass
                       else:
                         newText=newText.replace("<b>"+text2[0]+"</b>","\033[1m"+text2[0]+"\033[0m")
                     count+=1
-                word1 = "<u>"
-                word2 = "</u>"
+                split1 = "<u>"
+                split2 = "</u>"
                 newText2 = newText
-                text1 = s.split(word1)
+                text1 = s.split(split1)
                 if(len(text1)>1):
                   count=0
                   for D in range(len(text1)):
-                    text2 = text1[count].split(word2)
+                    text2 = text1[count].split(split2)
                     if(len(text2)>0):
                       if(count==0):
                         pass
@@ -678,28 +678,28 @@ def MainCommand():
               if(len(I.split("<bugs>"))==3):
                 curlString+="\033[1mBUGS\033[0m\n"
                 s = I.split("<bugs>")[1].replace("\l","\n")+"\n\n"
-                word1 = "<b>"
-                word2 = "</b>"
+                split1 = "<b>"
+                split2 = "</b>"
                 newText = s
-                text1 = s.split(word1)
+                text1 = s.split(split1)
                 if(len(text1)>1):
                   count=0
                   for B in range(len(text1)):
-                    text2 = text1[count].split(word2)
+                    text2 = text1[count].split(split2)
                     if(len(text2)>0):
                       if(count==0):
                         pass
                       else:
                         newText=newText.replace("<b>"+text2[0]+"</b>","\033[1m"+text2[0]+"\033[0m")
                     count+=1
-                word1 = "<u>"
-                word2 = "</u>"
+                split1 = "<u>"
+                split2 = "</u>"
                 newText2 = newText
-                text1 = s.split(word1)
+                text1 = s.split(split1)
                 if(len(text1)>1):
                   count=0
                   for D in range(len(text1)):
-                    text2 = text1[count].split(word2)
+                    text2 = text1[count].split(split2)
                     if(len(text2)>0):
                       if(count==0):
                         pass
@@ -710,28 +710,28 @@ def MainCommand():
               if(len(I.split("<standards>"))==3):
                 curlString+="\033[1mSTANDARDS\033[0m\n"
                 s = I.split("<standards>")[1].replace("\l","\n")+"\n\n"
-                word1 = "<b>"
-                word2 = "</b>"
+                split1 = "<b>"
+                split2 = "</b>"
                 newText = s
-                text1 = s.split(word1)
+                text1 = s.split(split1)
                 if(len(text1)>1):
                   count=0
                   for B in range(len(text1)):
-                    text2 = text1[count].split(word2)
+                    text2 = text1[count].split(split2)
                     if(len(text2)>0):
                       if(count==0):
                         pass
                       else:
                         newText=newText.replace("<b>"+text2[0]+"</b>","\033[1m"+text2[0]+"\033[0m")
                     count+=1
-                word1 = "<u>"
-                word2 = "</u>"
+                split1 = "<u>"
+                split2 = "</u>"
                 newText2 = newText
-                text1 = s.split(word1)
+                text1 = s.split(split1)
                 if(len(text1)>1):
                   count=0
                   for D in range(len(text1)):
-                    text2 = text1[count].split(word2)
+                    text2 = text1[count].split(split2)
                     if(len(text2)>0):
                       if(count==0):
                         pass
@@ -742,28 +742,28 @@ def MainCommand():
               if(len(I.split("<exitvalues>"))==3):
                 curlString+="\033[1mEXIT VALUES\033[0m\n"
                 s = I.split("<exitvalues>")[1].replace("\l","\n")+"\n\n"
-                word1 = "<b>"
-                word2 = "</b>"
+                split1 = "<b>"
+                split2 = "</b>"
                 newText = s
-                text1 = s.split(word1)
+                text1 = s.split(split1)
                 if(len(text1)>1):
                   count=0
                   for B in range(len(text1)):
-                    text2 = text1[count].split(word2)
+                    text2 = text1[count].split(split2)
                     if(len(text2)>0):
                       if(count==0):
                         pass
                       else:
                         newText=newText.replace("<b>"+text2[0]+"</b>","\033[1m"+text2[0]+"\033[0m")
                     count+=1
-                word1 = "<u>"
-                word2 = "</u>"
+                split1 = "<u>"
+                split2 = "</u>"
                 newText2 = newText
-                text1 = s.split(word1)
+                text1 = s.split(split1)
                 if(len(text1)>1):
                   count=0
                   for D in range(len(text1)):
-                    text2 = text1[count].split(word2)
+                    text2 = text1[count].split(split2)
                     if(len(text2)>0):
                       if(count==0):
                         pass
@@ -774,28 +774,28 @@ def MainCommand():
               if(len(I.split("<author>"))==3):
                 curlString+="\033[1mAUTHOR\033[0m\n"
                 s = I.split("<author>")[1].replace("\l","\n")+"\n\n"
-                word1 = "<b>"
-                word2 = "</b>"
+                split1 = "<b>"
+                split2 = "</b>"
                 newText = s
-                text1 = s.split(word1)
+                text1 = s.split(split1)
                 if(len(text1)>1):
                   count=0
                   for B in range(len(text1)):
-                    text2 = text1[count].split(word2)
+                    text2 = text1[count].split(split2)
                     if(len(text2)>0):
                       if(count==0):
                         pass
                       else:
                         newText=newText.replace("<b>"+text2[0]+"</b>","\033[1m"+text2[0]+"\033[0m")
                     count+=1
-                word1 = "<u>"
-                word2 = "</u>"
+                split1 = "<u>"
+                split2 = "</u>"
                 newText2 = newText
-                text1 = s.split(word1)
+                text1 = s.split(split1)
                 if(len(text1)>1):
                   count=0
                   for D in range(len(text1)):
-                    text2 = text1[count].split(word2)
+                    text2 = text1[count].split(split2)
                     if(len(text2)>0):
                       if(count==0):
                         pass
@@ -827,7 +827,7 @@ def MainCommand():
           filepath = os.path.join(folder, file)
           f = open(filepath, 'r')
           try:
-            print("%-12s %s" %(file.replace(".help",""),f.read().split("<description>")[1].replace("<b>","").replace("</b>","").replace("<u>","").replace("</u>","")))
+            print("%-12s %s" %(file.replace(".help",""),f.read().split("<description>")[1].replace("<b>","").replace("</b>","").replace("<u>","").replace("</u>","").replace("\l","").replace("        "," ")))
           except IndexError:
             pass
           #.replace("#BLUE","").replace("#RESET","").replace("#PINK","").replace("#RED","").replace("#YELLOW","")

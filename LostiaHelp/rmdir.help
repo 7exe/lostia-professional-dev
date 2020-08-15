@@ -1,3 +1,3 @@
 <name>rmdir - remove empty directories<name>
-<synopsis>rmdir [directory]<synopsis>
+<synopsis><b>rmdir</b> [<u>DIRECTORY</u>]<synopsis>
 <description>Remove the DIRECTORY(ies), if they are empty.<description>

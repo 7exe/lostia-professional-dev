@@ -12,8 +12,21 @@ def check_if_has_arguments():
 
 def check_if_user_exists_and_save_new_data():
   
+  
   users = open("LostiaFiles/keychain.keychain")
-  loggedInAs = open("LostiaFiles/user.data")
+  loggedInAs = open("LostiaFiles/user.data").read()
+  if(loggedInAs == "guest"):
+    print("passwd: cannot target this user")
+    end(sys.argv)
+  if(loggedInAs == "systemadmin"):
+    pass
+  else:
+    if(loggedInAs == sys.argv[1]):
+      pass
+    else:
+      print("passwd: cannot target this user")
+      end(sys.argv)
+
   if(loggedInAs == "guest"):
     print("Permission Denied")
     end(sys.argv)
@@ -23,6 +36,7 @@ def check_if_user_exists_and_save_new_data():
 
     if(sys.argv[1] == user.split("/")[2]):
       password = user.split("/")[3]
+      
       ignorePassword = 0
       if(loggedInAs == "systemadmin"):
         ignorePassword = 1

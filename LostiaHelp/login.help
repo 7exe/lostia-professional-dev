@@ -1,3 +1,3 @@
 <name>login - login to existing user<name>
-<synopsis>login [username]<synopsis>
+<synopsis><b>login</b> [<u>username</u>]<synopsis>
 <description>login to an existing user that has been added to ash<description>

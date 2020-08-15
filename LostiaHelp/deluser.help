@@ -1,0 +1,6 @@
+<name>deluser - remove a user from Ash<name>
+<synopsis><b>deluser</b> [<u>options</u>] [<u>--remove-home</u>] [<u>--backup-to DIR</u>] user<synopsis>
+<description><b>deluser</b> Removes a user that has been added to the Ash shell<description>
+<options><b>--backup-to</b>      Place  the backup files not in / but in the directory specified by this parameter.\l\l       <b>--remove-home</b>      Remove the home directory of the user.  If  --backup-to  is  specified, the files are deleted after having performed the backup.<options>
+<seealso><b>adduser</b><seealso>
+<author>Written by Elliot Singh for the Ash project<author>

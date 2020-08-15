@@ -1,3 +1,3 @@
-<name>touch - create file in the current directory<name>
-<synopsis>touch[filename]<synopsis>
+<name>touch - create file in the current working directory<name>
+<synopsis><b>touch</b> [<u>FILENAME</u>]<synopsis>
 <description>create a specified file in the current directory<description>

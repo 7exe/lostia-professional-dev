@@ -1,3 +1,3 @@
 <name>install - installs modules from archive<name>
+<synopsis><b>install</b> [<u>path_to_zip</u>]<synopsis>
 <description>Installs modules from an archive made in the lostia module installer format<description>
-<synopsis>install [path_to_zip]<synopsis>

@@ -1,4 +1,4 @@
 <name>history - shows history of commands runned in the past<name>
-<synopsis>history<synopsis>
+<synopsis><b>history</b> [<u>OPTION</u>]...<synopsis>
 <description>print all commands runned in the past<description>
-<options>-S      used to search for a command in history<options>
+<options><b>-S</b>      used to search for a command in history<options>

@@ -9,8 +9,11 @@ users = open("LostiaFiles/keychain.keychain").readlines()
 
 permissions = ["sysadmin", "user", "admin"]
 
+currentUser = open("LostiaFiles/user.data").read()
+if(currentUser!="systemadmin"):
+  print("adduser: Only root may add a user to Ash")
+  end(sys.argv)
 
-check_for_permission()
 if(len(sys.argv)<2):
   print("adduser: user, permission [Optional]")
   end(sys.argv)
@@ -35,7 +38,11 @@ def validate_permission():
 
 def create_new_home_directory(name):
   print("Creating home directory `/home/"+name+"' ...")
-  os.mkdir("LostiaFiles/root/home/"+name+"/")
+  try:
+    os.mkdir("LostiaFiles/root/home/"+name+"/")
+  except FileExistsError:
+    print("Home directory already exists!")
+    end(sys.argv)
 
 def copy_files_default_files(name):
   print("Copying files from `/etc/skel'")
