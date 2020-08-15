@@ -26,10 +26,10 @@ def MainCommand():
   
             for I in Help:
               if(len(I.split("<name>"))==3):
-                curlString+="NAME\n"
+                curlString+="\033[1mNAME\033[0m\n"
                 curlString+="       "+I.split("<name>")[1].replace("\l","\n")+"\n\n"
               if(len(I.split("<synopsis>"))==3):
-                curlString+="SYNOPSIS\n"
+                curlString+="\033[1mSYNOPSIS\033[0m\n"
                 word1 = "["
                 word2 = "]"
                 s = I.split("<synopsis>")[1].replace("\l","\n")+"\n\n"
@@ -47,34 +47,34 @@ def MainCommand():
                     count+=1
                 curlString+="       "+newText
               if(len(I.split("<description>"))==3):
-                curlString+="DESCRIPTION\n"
+                curlString+="\033[1mDESCRIPTION\033[0m\n"
                 curlString+="       "+I.split("<description>")[1]+"\l".replace("\l","\n")+"\n\n"
               if(len(I.split("<options>"))==3):
-                curlString+="OPTIONS\n"
+                curlString+="\033[1mOPTIONS\033[0m\n"
                 curlString+="       "+I.split("<options>")[1]+"\l".replace("\l","\n")+"\n\n"
               if(len(I.split("<seealso>"))==3):
-                curlString+="SEE ALSO\n"
+                curlString+="\033[1mSEE ALSO\033[0m\n"
                 curlString+="       "+I.split("<seealso>")[1]+"\l".replace("\l","\n")+"\n\n"
               if(len(I.split("<exitstatus>"))==3):
-                curlString+="EXIT STATUS\n"
+                curlString+="\033[1mEXIT STATUS\033[0m\n"
                 curlString+="       "+I.split("<exitstatu>")[1]+"\l".replace("\l","\n")
               if(len(I.split("<examples>"))==3):
-                curlString+="EXAMPLES\n"
+                curlString+="\033[1mEXAMPLES\033[0m\n"
                 curlString+="       "+I.split("<examples>")[1].replace("\l","\n")+"\n\n"
               if(len(I.split("<history>"))==3):
-                curlString+="HISTORY\n"
+                curlString+="\033[1mHISTORY\033[0m\n"
                 curlString+="       "+I.split("<history>")[1].replace("\l","\n")+"\n\n"
               if(len(I.split("<bugs>"))==3):
-                curlString+="BUGS\n"
+                curlString+="\033[1mBUGS\033[0m\n"
                 curlString+="       "+I.split("<bugs>")[1].replace("\l","\n")+"\n\n"
               if(len(I.split("<standards>"))==3):
-                curlString+="STANDARDS\n"
+                curlString+="\033[1mSTANDARDS\033[0m\n"
                 curlString+="       "+I.split("<standards>")[1].replace("\l","\n")+"\n\n"
               if(len(I.split("<exitvalues>"))==3):
-                curlString+="EXIT VALUES\n"
+                curlString+="\033[1mEXIT VALUES\033[0m\n"
                 curlString+="       "+I.split("<exitvalues>")[1].replace("\l","\n")+"\n\n"
               if(len(I.split("<author>"))==3):
-                curlString+="AUTHOR\n"
+                curlString+="\033[1mAUTHOR\033[0m\n"
                 curlString+="       "+I.split("<author>")[1].replace("\l","\n")+"\n\n"
               #.replace("#BLUE","\033[38;5;27m").replace("#RESET","\033[39m")
             curlString+="\n\x1b[6;30;47m(END)\n\x1b[0m"
@@ -87,10 +87,10 @@ def MainCommand():
             Help = open("LostiaHelp/"+sys.argv[1]+".help").readlines()
             for I in Help:
               if(len(I.split("<name>"))==3):
-                curlString+="NAME\n"
+                curlString+="\033[1mNAME\033[0m\n"
                 curlString+="       "+I.split("<name>")[1].replace("\l","\n")+"\n\n"
               if(len(I.split("<synopsis>"))==3):
-                curlString+="SYNOPSIS\n"
+                curlString+="\033[1mSYNOPSIS\033[0m\n"
                 word1 = "["
                 word2 = "]"
                 s = I.split("<synopsis>")[1].replace("\l","\n")+"\n\n"
@@ -108,34 +108,34 @@ def MainCommand():
                     count+=1
                 curlString+="       "+newText
               if(len(I.split("<description>"))==3):
-                curlString+="DESCRIPTION\n"
+                curlString+="\033[1mDESCRIPTION\033[0m\n"
                 curlString+="       "+I.split("<description>")[1].replace("\l","\n")+"\n\n"
               if(len(I.split("<options>"))==3):
-                curlString+="OPTIONS\n"
+                curlString+="\033[1mOPTIONS\033[0m\n"
                 curlString+="       "+I.split("<options>")[1].replace("\l","\n")+"\n\n"
               if(len(I.split("<seealso>"))==3):
-                curlString+="SEE ALSO\n"
+                curlString+="\033[1mSEE ALSO\033[0m\n"
                 curlString+="       "+I.split("<seealso>")[1].replace("\l","\n")+"\n\n"
               if(len(I.split("<exitstatus>"))==3):
-                curlString+="EXIT STATUS\n"
+                curlString+="\033[1mEXIT STATUS\033[0m\n"
                 curlString+="       "+I.split("<exitstatu>")[1].replace("\l","\n")+"\n\n"
               if(len(I.split("<examples>"))==3):
-                curlString+="EXAMPLES\n"
+                curlString+="\033[1mEXAMPLES\033[0m\n"
                 curlString+="       "+I.split("<examples>")[1].replace("\l","\n")+"\n\n"
               if(len(I.split("<history>"))==3):
-                curlString+="HISTORY\n"
+                curlString+="\033[1mHISTORY\033[0m\n"
                 curlString+="       "+I.split("<history>")[1].replace("\l","\n")+"\n\n"
               if(len(I.split("<bugs>"))==3):
-                curlString+="BUGS\n"
+                curlString+="\033[1mBUGS\033[0m\n"
                 curlString+="       "+I.split("<bugs>")[1].replace("\l","\n")+"\n\n"
               if(len(I.split("<standards>"))==3):
-                curlString+="STANDARDS\n"
+                curlString+="\033[1mSTANDARDS\033[0m\n"
                 curlString+="       "+I.split("<standards>")[1].replace("\l","\n")+"\n\n"
               if(len(I.split("<exitvalues>"))==3):
-                curlString+="EXIT VALUES\n"
+                curlString+="\033[1mEXIT VALUES\033[0m\n"
                 curlString+="       "+I.split("<exitvalues>")[1].replace("\l","\n")+"\n\n"
               if(len(I.split("<author>"))==3):
-                curlString+="AUTHOR\n"
+                curlString+="\033[1mAUTHOR\033[0m\n"
                 curlString+="       "+I.split("<author>")[1].replace("\l","\n")+"\n\n"
               #.replace("#BLUE","\033[38;5;27m").replace("#RESET","\033[39m")
               #.replace("#BLUE","\033[38;5;27m").replace("#RESET","\033[39m").replace("#PINK","\033[38;5;201m").replace("#RED","\033[38;5;1m").replace("#YELLOW","\033[38;5;11m")
