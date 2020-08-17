@@ -26,11 +26,11 @@ def MainCommand():
     global doPrint
     global customHeaders
     if(len(sys.argv) > 1):
-      if(os.path.exists("LostiaHelp/"+sys.argv[1]+".help")):
+      if(os.path.exists("LostiaHelp/"+sys.argv[1].lower()+".help")):
         curlString = ""
         for I in Modules:
-          if(I.replace("\n","") == sys.argv[1]):
-            Help = open("LostiaHelp/"+sys.argv[1]+".help").readlines()
+          if(I.replace("\n","") == sys.argv[1].lower()):
+            Help = open("LostiaHelp/"+sys.argv[1].lower()+".help").readlines()
             debugInfo = Help
             curlString+="dong"
   
@@ -43,7 +43,7 @@ def MainCommand():
                 
                 splitter = I.split("#")
                 if(len(splitter)>1):
-                  if(splitter[1] in defaultHeaders or splitter[1] in customHeaders):
+                  if(splitter[1].strip() in defaultHeaders or splitter[1].strip() in customHeaders):
                     raise SyntaxError("Help Parser: Defined custom header already exists! "+I)
                     end(sys.argv)
                   else:
@@ -51,7 +51,7 @@ def MainCommand():
               for Baboon in customHeaders:
                 if(len(I.split("<"+Baboon.replace(" ","")+">")) == 3):
                   curlString+="\033[1m"+Baboon.upper()+"\033[0m\n"
-                  s = I.split("<"+Baboon.replace(" ","")+">")[1].replace(" ","").replace("\l","\n")+"\n\n"
+                  s = I.split("<"+Baboon.strip().replace(" ","")+">")[1].replace(" ","").replace("\l","\n")+"\n\n"
                   split1 = "<b>"
                   split2 = "</b>"
                   newText = s
@@ -473,8 +473,8 @@ def MainCommand():
           else:
             pass
         for I in CoreCommands:
-          if(I.replace("\n","") == sys.argv[1]):
-            Help = open("LostiaHelp/"+sys.argv[1]+".help").readlines()
+          if(I.replace("\n","") == sys.argv[1].lower()):
+            Help = open("LostiaHelp/"+sys.argv[1].lower()+".help").readlines()
             for I in Help:
               if(I.startswith("#")):
                 
@@ -926,7 +926,7 @@ def MainCommand():
           filepath = os.path.join(folder, file)
           f = open(filepath, 'r')
           try:
-            print("%-12s %s" %(file.replace(".help",""),f.read().split("<description>")[1].replace("<b>","").replace("</b>","").replace("<u>","").replace("</u>","").replace("\l","").replace("        "," ")))
+            print("%-12s %s" %(file.replace(".help",""),f.read().split("<name>")[1].replace("<b>","").replace("</b>","").replace("<u>","").replace("</u>","").replace("\l","").replace("        "," ")))
           except IndexError:
             pass
           #.replace("#BLUE","").replace("#RESET","").replace("#PINK","").replace("#RED","").replace("#YELLOW","")
@@ -938,6 +938,9 @@ def MainCommand():
 MainCommand()
 if(doPrint != False):
   while True:
-    if(getkey() == 'q'):
-      os.system("clear")
-      end(sys.argv)
+    try:
+      if(getkey() == 'q'):
+        os.system("clear")
+        end(sys.argv)
+    except KeyboardInterrupt:
+      pass

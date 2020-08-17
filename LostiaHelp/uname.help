@@ -1,0 +1,7 @@
+<name>uname - print system information<name>
+
+<synopsis><b>uname</b> [<u>OPTION</u>]...<synopsis>
+
+<description>print certain system information. with no OPTION, same as <b>-s</b>.\l\l       <b>-a, --all</b>\l              print all information, in the following order, except omit -p and -i if unknown:\l\l       <b>-s, --kernal-name</b>\l              print the kernal name\l\l       <b>-n, --nodename</b>\l              print the network node hostname\l\l       <b>-r, --kernal-release</b>\l              print the kernal release\l\l       <b>-v, --kernal-version</b>\l              print the kernal version\l\l       <b>-m, --machine</b>\l              print the machine hardware name\l\l       <b>-p, --processor</b>\l              print the procerssor type (non-portable)\l\l       <b>-o, --operating-system</b>\l              print the operating system<description>
+
+<author>Written by Elliot Singh for the Ash project<author>
