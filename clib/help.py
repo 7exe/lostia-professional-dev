@@ -12,19 +12,76 @@ fixedCoreCmd = []
 for command in CoreCommands:
   fixedCoreCmd.append(command.replace("\n",""))
 
+
+defaultHeaders = ["seealso","exitvalues","synopsis","description","author","name","options","exitstatus","examples","history","standards","bugs"]
+
+debugInfo = []
+customHeaders = []
+
 doPrint = False
 
 def MainCommand():
-  def do_the_actuall_command():
+  def parse():
+    global debugInfo
     global doPrint
+    global customHeaders
     if(len(sys.argv) > 1):
       if(os.path.exists("LostiaHelp/"+sys.argv[1]+".help")):
         curlString = ""
         for I in Modules:
           if(I.replace("\n","") == sys.argv[1]):
             Help = open("LostiaHelp/"+sys.argv[1]+".help").readlines()
+            debugInfo = Help
+            curlString+="dong"
   
             for I in Help:
+              
+              
+
+
+              if(I.startswith("#")):
+                
+                splitter = I.split("#")
+                if(len(splitter)>1):
+                  if(splitter[1] in defaultHeaders or splitter[1] in customHeaders):
+                    raise SyntaxError("Help Parser: Defined custom header already exists! "+I)
+                    end(sys.argv)
+                  else:
+                    customHeaders.append(splitter[1])
+              for Baboon in customHeaders:
+                if(len(I.split("<"+Baboon.replace(" ","")+">")) == 3):
+                  curlString+="\033[1m"+Baboon.upper()+"\033[0m\n"
+                  s = I.split("<"+Baboon.replace(" ","")+">")[1].replace(" ","").replace("\l","\n")+"\n\n"
+                  split1 = "<b>"
+                  split2 = "</b>"
+                  newText = s
+                  text1 = s.split(split1)
+                  if(len(text1)>1):
+                    count=0
+                    for B in range(len(text1)):
+                      text2 = text1[count].split(split2)
+                      if(len(text2)>0):
+                        if(count==0):
+                          pass
+                        else:
+                          newText=newText.replace("<b>"+text2[0]+"</b>","\033[1m"+text2[0]+"\033[0m")
+                      count+=1
+                  split1 = "<u>"
+                  split2 = "</u>"
+                  newText2 = newText
+                  text1 = s.split(split1)
+                  if(len(text1)>1):
+                    count=0
+                    for D in range(len(text1)):
+                      text2 = text1[count].split(split2)
+                      if(len(text2)>0):
+                        if(count==0):
+                          pass
+                        else:
+                          newText2=newText2.replace("<u>"+text2[0]+"</u>","\033[4m"+text2[0]+"\033[0m")
+                      count+=1
+                  curlString+="       "+newText2
+
               if(len(I.split("<name>"))==3):
                 curlString+="\033[1mNAME\033[0m\n"
                 s = I.split("<name>")[1].replace("\l","\n")+"\n\n"
@@ -419,6 +476,48 @@ def MainCommand():
           if(I.replace("\n","") == sys.argv[1]):
             Help = open("LostiaHelp/"+sys.argv[1]+".help").readlines()
             for I in Help:
+              if(I.startswith("#")):
+                
+                splitter = I.split("#")
+                if(len(splitter)>1):
+                  if(splitter[1] in defaultHeaders or splitter[1] in customHeaders):
+                    raise SyntaxError("Help Parser: Defined custom header already exists! "+I)
+                    end(sys.argv)
+                  else:
+                    customHeaders.append(splitter[1])
+              for Baboon in customHeaders:
+                if(len(I.split("<"+Baboon.replace(" ","")+">")) == 3):
+                  curlString+="\033[1m"+Baboon.upper()+"\033[0m\n"
+                  s = I.split("<"+Baboon.replace(" ","")+">")[1].replace(" ","").replace("\l","\n")+"\n\n"
+                  split1 = "<b>"
+                  split2 = "</b>"
+                  newText = s
+                  text1 = s.split(split1)
+                  if(len(text1)>1):
+                    count=0
+                    for B in range(len(text1)):
+                      text2 = text1[count].split(split2)
+                      if(len(text2)>0):
+                        if(count==0):
+                          pass
+                        else:
+                          newText=newText.replace("<b>"+text2[0]+"</b>","\033[1m"+text2[0]+"\033[0m")
+                      count+=1
+                  split1 = "<u>"
+                  split2 = "</u>"
+                  newText2 = newText
+                  text1 = s.split(split1)
+                  if(len(text1)>1):
+                    count=0
+                    for D in range(len(text1)):
+                      text2 = text1[count].split(split2)
+                      if(len(text2)>0):
+                        if(count==0):
+                          pass
+                        else:
+                          newText2=newText2.replace("<u>"+text2[0]+"</u>","\033[4m"+text2[0]+"\033[0m")
+                      count+=1
+                  curlString+="       "+newText2
               if(len(I.split("<name>"))==3):
                 curlString+="\033[1mNAME\033[0m\n"
                 s = I.split("<name>")[1].replace("\l","\n")+"\n\n"
@@ -834,7 +933,7 @@ def MainCommand():
           f.close()
         else:
           pass
-  do_the_actuall_command()
+  parse()
 
 MainCommand()
 if(doPrint != False):
